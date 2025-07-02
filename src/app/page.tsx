@@ -14,6 +14,7 @@ import MarketplaceSection from "@/components/home/MarketplatSection";
 import JoinCommunitySection from "@/components/home/JoinCommunitySection";
 import ReviewSection from "@/components/home/ReviewSection";
 import BlogSection from "@/components/home/BlogSection";
+import FaqSection from "@/components/home/FaqSection";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <JoinCommunitySection />
       <ReviewSection />
       <BlogSection />
+      <FaqSection />
     </>
   );
 }

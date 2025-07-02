@@ -38,8 +38,15 @@ const blogs = [
 
 const BlogSection = () => {
   return (
-    <Container className="py-8 md:py-20">
-      <div className="flex flex-col gap-8">
+    <Container className="relative z-0 py-8 md:py-20">
+      <Image
+        src="/assets/home/blog-bg.png"
+        width={1300}
+        height={700}
+        alt="blog"
+        className="w-auto absolute z-0 top-0 left-0"
+      />
+      <div className="relative z-10 flex flex-col gap-8">
         <div className="flex flex-col gap-3 md:gap-6">
           <h1>From the FX Utopia Blog</h1>
           <p className="text-center">
