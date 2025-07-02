@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -5,57 +7,55 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const FAQs = [
+  {
+    question: "Is FX Utopia free to join?",
+    answer:
+      "Yes! Core features like educational content, the blog, and community access are 100% free. Some premium tools and marketplace items may require payment.",
+  },
+  {
+    question: "Do I need trading experience to use FX Utopia?",
+    answer:
+      "No, you don't need trading experience to use FX Utopia because the platform is designed to be user-friendly and handles trading automatically for you.",
+  },
+  {
+    question: "Can I access FX and Crypto education in one place?",
+    answer:
+      "Yes, FX Utopia provides both FX and Crypto education in one convenient platform.",
+  },
+  {
+    question: "How do I buy something from the marketplace?",
+    answer:
+      "To buy something from the marketplace, simply find the item you want, click 'Buy' or 'Add to Cart', then proceed to checkout and confirm your payment.",
+  },
+  {
+    question: "Is the mentorship program included in the free plan?",
+    answer:
+      "Yes, because the free plan includes basic access to the mentorship program.",
+  },
+  {
+    question: "How do I join the community?",
+    answer:
+      "To join the community, simply click the “Sign Up” or “Join Community” button on our website, create an account, and follow the prompts to introduce yourself in the welcome channel.",
+  },
+];
+
 export function FaqAccordion() {
   return (
     <Accordion
       type="single"
       collapsible
-      className="w-full"
+      className="w-full max-w-[617px] space-y-5"
       defaultValue="item-1"
     >
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Product Information</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Shipping Details</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            We offer worldwide shipping through trusted courier partners.
-            Standard delivery takes 3-5 business days, while express shipping
-            ensures delivery within 1-2 business days.
-          </p>
-          <p>
-            All orders are carefully packaged and fully insured. Track your
-            shipment in real-time through our dedicated tracking portal.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Return Policy</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            We stand behind our products with a comprehensive 30-day return
-            policy. If you&apos;re not completely satisfied, simply return the
-            item in its original condition.
-          </p>
-          <p>
-            Our hassle-free return process includes free return shipping and
-            full refunds processed within 48 hours of receiving the returned
-            item.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
+      {FAQs.map((item, index) => (
+        <AccordionItem key={index} value={`item-${index + 1}`}>
+          <AccordionTrigger>{item.question}</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p>{item.answer}</p>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 }
