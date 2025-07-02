@@ -77,7 +77,7 @@ const SLIDES = [
 
 const ReviewSection = () => {
   return (
-    <div className="w-full flex flex-col gap-8 lg:gap-20 py-8 md:py-20 bg-[#060015]">
+    <div className="w-full flex flex-col gap-8 lg:gap-24 py-8 md:py-20 bg-[#060015]">
       <div>
         <h1>Trusted by Thousands Around the World</h1>
         <p className="text-center mt-3 md:mt-6">

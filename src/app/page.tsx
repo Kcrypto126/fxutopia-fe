@@ -13,6 +13,7 @@ import TradingCommandSection from "@/components/home/TradingCommandSection";
 import MarketplaceSection from "@/components/home/MarketplatSection";
 import JoinCommunitySection from "@/components/home/JoinCommunitySection";
 import ReviewSection from "@/components/home/ReviewSection";
+import BlogSection from "@/components/home/BlogSection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <MarketplaceSection />
       <JoinCommunitySection />
       <ReviewSection />
+      <BlogSection />
     </>
   );
 }

@@ -12,7 +12,7 @@ interface ReviewProps {
 const Review = ({ user, text }: ReviewProps) => {
   return (
     <>
-      <div className="w-full max-w-[421px] h-full p-6 rounded-[12px] border-border border-[1px] bg-[#FAFAFA08] space-y-2">
+      <div className="w-full max-w-[421px] h-full p-5 rounded-[12px] border-border border-[1px] bg-[#FAFAFA08] space-y-2">
         <div className="flex gap-3 items-center">
           <Image
             src={user.avatar}
@@ -29,7 +29,17 @@ const Review = ({ user, text }: ReviewProps) => {
           </div>
         </div>
         <div>
-          <p className="text-[#A1A1AA] text-[16px] font-[16px]">{text}</p>
+          <p className="text-[#A1A1AA] text-[16px] font-[16px]">
+            {text.split(/(\s+)/).map((word, idx) =>
+              word.startsWith("@") ? (
+                <span key={idx} className="text-[#A78BFA]">
+                  {word}
+                </span>
+              ) : (
+                word
+              )
+            )}
+          </p>
         </div>
       </div>
     </>

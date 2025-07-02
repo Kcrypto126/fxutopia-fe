@@ -229,10 +229,10 @@
   width: 100%;
   /* max-width: 48rem; */
   margin: auto;
-  --slide-review-height: 176px;
+  --slide-review-height: 185px;
   --slide-review-spacing: 24px;
   --slide-review-margin: 0;
-  --slide-review-size: 421px;
+  --slide-review-size: 445px;
 }
 @media only screen and (max-width: 421px) {
   .embla_review {
