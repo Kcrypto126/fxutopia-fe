@@ -5,20 +5,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import {
-  IconCalendarWeek,
-  IconBuildingBank,
-  IconAntennaBars5,
-  IconBrowserPlus,
-  IconStarFilled,
-} from "@tabler/icons-react";
-
 import TopTrader from "./TopTrader";
-
-const TWEEN_FACTOR_BASE = 0.52;
-
-const numberWithinRange = (number: number, min: number, max: number): number =>
-  Math.min(Math.max(number, min), max);
 
 type PropType = {
   slides: number[];
