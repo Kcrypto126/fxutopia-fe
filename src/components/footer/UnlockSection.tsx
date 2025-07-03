@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const UnlockSection = () => {
   return (
-    <Container className="pb-8 md:pb-[120px]">
+    <Container className="pb-8 md:pb-[70px]">
       <div className="relative z-0 rounded-3xl overflow-hidden px-3.5">
         <Image
           src="/assets/home/unlock-bg.png"
