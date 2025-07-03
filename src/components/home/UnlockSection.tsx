@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Container from "../layouts/Container";
 import { Button } from "../ui/button";
 
@@ -25,18 +26,22 @@ const UnlockSection = () => {
             platform.
           </p>
           <div className="flex flex-col md:flex-row w-full justify-center gap-5 mt-8">
-            <Button
-              variant="common"
-              className="common-button w-full md:!w-[204px] !bg-[#1283FF] hover:!bg-[#57a5f8]"
-            >
-              Join FX Utopia
-            </Button>
-            <Button
-              variant="common"
-              className="common-button w-full md:!w-[269px]"
-            >
-              Create Your Account
-            </Button>
+            <Link href="/">
+              <Button
+                variant="common"
+                className="common-button w-full md:!w-[204px] !bg-[#1283FF] hover:!bg-[#57a5f8]"
+              >
+                Join FX Utopia
+              </Button>
+            </Link>
+            <Link href="/account/signup">
+              <Button
+                variant="common"
+                className="common-button w-full md:!w-[269px]"
+              >
+                Create Your Account
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

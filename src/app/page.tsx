@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import BrandSection from "@/components/home/BrandSection";
 import TrustedSection from "@/components/home/TrustedSection";
@@ -20,6 +19,7 @@ import UnlockSection from "@/components/home/UnlockSection";
 export default function Home() {
   return (
     <>
+      <Header />
       <HeroSection />
       <BrandSection />
       <TrustedSection />
@@ -33,6 +33,7 @@ export default function Home() {
       <BlogSection />
       <FaqSection />
       <UnlockSection />
+      <Footer />
     </>
   );
 }

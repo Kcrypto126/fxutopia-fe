@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,6 +21,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
+import { ToggleIcon } from "../ui/icon";
 
 const mainMenu: { title: string; link: string }[] = [
   {
@@ -50,6 +51,7 @@ const mainMenu: { title: string; link: string }[] = [
 ];
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="w-full h-[64px] lg:h-[112px] fixed left-0 top-0 flex items-center z-50 px-3 bg-[#00000040] backdrop-blur-sm">
       <div className="max-w-[1440px] w-full m-auto flex gap-2 items-center justify-between">
@@ -81,12 +83,7 @@ const Header = () => {
                 variant="outline"
                 className="!p-0 !w-8 !h-8 cursor-pointer"
               >
-                <Image
-                  src="/assets/icon/toggle.svg"
-                  width={16}
-                  height={16}
-                  alt="toggle"
-                />
+                <ToggleIcon />
               </Button>
             </SheetTrigger>
             <SheetContent
@@ -95,7 +92,9 @@ const Header = () => {
             >
               <SheetHeader className="z-20">
                 <SheetTitle className="flex justify-center">
-                  <Image src="/logo.png" width={200} height={56} alt="logo" />
+                  <Link href="/">
+                    <Image src="/logo.png" width={200} height={56} alt="logo" />
+                  </Link>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-2">
@@ -104,7 +103,6 @@ const Header = () => {
                     key={item.title}
                     href={item.link}
                     onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                      //   e.preventDefault;
                       const sheetClose = document.querySelector(
                         '[data-slot="sheet-close"]'
                       ) as HTMLButtonElement;
@@ -124,10 +122,14 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex gap-3 justify-end items-center py-1">
-          <Button variant="login" className="login-button">
-            Login
-          </Button>
-          <Button variant="signup">Sign up</Button>
+          <Link href="/account/signin">
+            <Button variant="login" className="login-button">
+              Login
+            </Button>
+          </Link>
+          <Link href="/account/signup">
+            <Button variant="signup">Sign up</Button>
+          </Link>
         </div>
       </div>
     </div>

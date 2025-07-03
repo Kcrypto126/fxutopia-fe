@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Container from "../layouts/Container";
 import { Button } from "../ui/button";
 
@@ -16,9 +17,11 @@ const JoinCommunitySection = () => {
             <p className="text-center md:text-start">
               FX Utopia is more than a platform. It&apos;s a movement.
             </p>
+            <Link href="/">
             <Button variant="common" className="common-button !w-[269px]">
               Join The Community
             </Button>
+            </Link>
           </div>
         </div>
         <div className="w-full relative z-0">
