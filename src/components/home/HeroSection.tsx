@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full flex items-end overflow-hidden z-0">
+    <div className="relative w-full flex items-end overflow-hidden z-0" id="home">
       <div className="absolute top-0 left-0 w-full h-full select-none">
         <Image
           src="/assets/home/hero-top.png"

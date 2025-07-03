@@ -306,3 +306,18 @@ img {
 .blog:hover .fetured-img {
   transform: scale(1.05);
 }
+
+svg.social-icon:hover path {
+  fill: #9862db;
+}
+
+svg.social-icon:hover circle {
+  stroke: #9862db;
+}
+
+@media only screen and (max-width: 768px) {
+  svg.social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
