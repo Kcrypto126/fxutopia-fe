@@ -124,7 +124,7 @@ const TrustedSection = () => {
           </div>
         </div>
         <div className="relative z-30 flex flex-col items-center px-3 w-full">
-          <h5 className="hidden md:block text-[40px] md:text-[64px] lg:text-[170px] select-none uppercase font-riosark font-[400] text-center leading-[100%] bg-gradient-to-b from-[#7851A9] to-[#00000054] bg-clip-text text-transparent">
+          <h5 className="hidden md:block text-[40px] md:text-[64px] lg:text-[100px] xl:text-[150px] select-none uppercase font-riosark font-[400] text-center leading-[100%] bg-gradient-to-b from-[#7851A9] to-[#00000054] bg-clip-text text-transparent">
             Key Features
           </h5>
           <h1 className="max-w-[1018px] -mt-[10px] sm:-mt-[40px]">

@@ -45,7 +45,7 @@ export function FaqAccordion() {
     <Accordion
       type="single"
       collapsible
-      className="w-full max-w-[617px] space-y-5"
+      className="w-full max-w-[617px] space-y-3 md:space-y-5"
       defaultValue="item-1"
     >
       {FAQs.map((item, index) => (

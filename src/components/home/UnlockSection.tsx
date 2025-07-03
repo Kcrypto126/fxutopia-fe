@@ -16,7 +16,7 @@ const UnlockSection = () => {
           className="absolute z-0 top-0 left-0 w-full h-full object-cover"
         />
         <div className="relative z-10 w-full h-full min-h-[550px] flex flex-col gap-3 justify-center items-center">
-          <h5 className="text-[30px] md:text-[72px] font-[400] font-riosark text-center max-w-[948px] leading-[107%] uppercase">
+          <h5 className="text-[30px] md:text-[48px] lg:text-[72px] font-[400] font-riosark text-center max-w-[948px] leading-[110%] uppercase">
             Ready to Unlock Your Trading Potential?
           </h5>
           <p className="text-center max-w-[709px]">

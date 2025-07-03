@@ -9,7 +9,7 @@ const FaqSection = () => {
     <Container className="relative z-0 py-8 lg:py-28">
       <div className="flex flex-col lg:flex-row justify-between gap-9">
         <div className="flex-1 flex flex-col gap-4">
-          <h5 className="text-[30px] md:text-[72px] font-riosark font-[400] leading-[110%] text-center lg:text-start">
+          <h5 className="text-[30px] md:text-[48px] lg:text-[72px] font-riosark font-[400] leading-[110%] text-center lg:text-start">
             Frequently Asked Questions
           </h5>
           <p className="text-center lg:text-start">
