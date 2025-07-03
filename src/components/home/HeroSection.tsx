@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full flex items-end overflow-hidden z-0" id="home">
+    <div
+      className="relative w-full flex items-end overflow-hidden z-0"
+      id="home"
+    >
       <div className="absolute top-0 left-0 w-full h-full select-none">
         <Image
           src="/assets/home/hero-top.png"
@@ -71,9 +75,14 @@ const HeroSection = () => {
           getting started or looking to sharpen your edge, our platform delivers
           everything you need to succeed.
         </p>
-        <Button variant="common" className="common-button !w-[247px] mt-[16px]">
-          Join The Community
-        </Button>
+        <Link href="/">
+          <Button
+            variant="common"
+            className="common-button !w-[247px] mt-[16px]"
+          >
+            Join The Community
+          </Button>
+        </Link>
         <Image
           src="/assets/home/hero-main.png"
           width={1012}
