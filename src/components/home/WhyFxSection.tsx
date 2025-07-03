@@ -1,7 +1,6 @@
 "use client";
 
 import Container from "../layouts/Container";
-import Image from "next/image";
 import { CartIcon, LampIcon, CircleCheckIcon, EarthIcon } from "../ui/icon";
 
 const WHYFX = [

@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "./Container";
 import UnlockSection from "../footer/UnlockSection";
 import FooterSection from "../footer/FooterSection";
 

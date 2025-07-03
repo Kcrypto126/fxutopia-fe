@@ -6,11 +6,6 @@ import {
   EmblaEventType,
   EmblaOptionsType,
 } from "embla-carousel";
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import Autoplay from "embla-carousel-autoplay";
@@ -37,13 +32,6 @@ const TopTraderCarousel: React.FC<PropType> = (props) => {
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
 
   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
@@ -111,7 +99,7 @@ const TopTraderCarousel: React.FC<PropType> = (props) => {
       .on("reInit", tweenScale)
       .on("scroll", tweenScale)
       .on("slideFocus", tweenScale);
-  }, [emblaApi, tweenScale]);
+  }, [emblaApi, tweenScale, setTweenNodes, setTweenFactor]);
 
   return (
     <div className="embla_trader">
@@ -128,10 +116,6 @@ const TopTraderCarousel: React.FC<PropType> = (props) => {
       </div>
 
       <div className="embla__controls">
-        {/* <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div> */}
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton

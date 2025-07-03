@@ -3,15 +3,11 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -51,7 +47,6 @@ const mainMenu: { title: string; link: string }[] = [
 ];
 
 const Header = () => {
-  const router = useRouter();
   return (
     <div className="w-full h-[64px] lg:h-[112px] fixed left-0 top-0 flex items-center z-50 px-3 bg-[#00000040] backdrop-blur-sm">
       <div className="max-w-[1440px] w-full m-auto flex gap-2 items-center justify-between">
@@ -102,7 +97,7 @@ const Header = () => {
                   <Link
                     key={item.title}
                     href={item.link}
-                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                    onClick={() => {
                       const sheetClose = document.querySelector(
                         '[data-slot="sheet-close"]'
                       ) as HTMLButtonElement;

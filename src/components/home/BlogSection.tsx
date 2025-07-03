@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Container from "../layouts/Container";
-import Link from "next/link";
 import { BlogCarousel } from "./BlogCarousel";
 
 const blogs = [

@@ -1,6 +1,6 @@
 "use client";
 
-import EmblaCarousel, { EmblaOptionsType } from "embla-carousel";
+import { EmblaOptionsType } from "embla-carousel";
 import Image from "next/image";
 
 import ReviewCarousel from "./ReviewCarousel";
