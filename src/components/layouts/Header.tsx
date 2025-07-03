@@ -118,12 +118,20 @@ const Header = () => {
 
         <div className="hidden lg:flex gap-3 justify-end items-center py-1">
           <Link href="/account/signin">
-            <Button variant="login" className="login-button">
+            <Button
+              variant="login"
+              className="login-button !bg-transparent hover:!bg-transparent"
+            >
               Login
             </Button>
           </Link>
           <Link href="/account/signup">
-            <Button variant="signup">Sign up</Button>
+            <Button
+              variant="login"
+              className="text-[#000] bg-[#fff] hover:bg-[#fff]"
+            >
+              Sign up
+            </Button>
           </Link>
         </div>
       </div>

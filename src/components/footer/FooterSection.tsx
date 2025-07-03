@@ -100,7 +100,7 @@ const FooterSection = () => {
                 <Button
                   type="submit"
                   variant="common"
-                  className="common-button !w-[134px] !h-[52px] md:!h-[58px] md:!w-[177px]"
+                  className="login-button !w-[134px] !h-[52px] md:!h-[58px] md:!w-[177px]"
                 >
                   {isSubmiting ? (
                     <IconLoader2 className="animate-spin" />
