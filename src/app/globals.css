@@ -198,19 +198,35 @@ img {
 
 .login-button {
   position: relative;
+  background-color: #8a50d6;
 }
+.login-button:hover {
+  background-color: rgb(160, 104, 233) !important;
+}
+
+/* .login-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(180deg, #ffffff, #a262de);
+  border-radius: inherit;
+  
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+} */
 
 .login-button::before {
   content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
-  background: linear-gradient(190deg, #ffffff, #5914a9);
+  background: linear-gradient(180deg, #ffffff, #a262de);
   border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
 .common-button {
@@ -224,10 +240,10 @@ img {
   padding: 1px;
   background: linear-gradient(190deg, #666666, #ffffff);
   border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
 @keyframes rotate {

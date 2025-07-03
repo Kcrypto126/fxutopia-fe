@@ -21,11 +21,9 @@ const buttonVariants = cva(
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
         login:
-          "!h-[48px] !px-6 !text-[16px] !text-white !font-poppins font-[600] rounded-full cursor-pointer hover:bg-[#ffffff10] hover:shadow-[0_0_15px_#ffffff90]",
-        signup:
-          "!h-[48px] !px-6 !text-[16px] !text-black !font-poppins font-[600] rounded-full cursor-pointer bg-[#ffffff] hover:shadow-[0_0_15px_#ffffff90]",
+          "!h-[48px] !px-6 !text-[16px] !font-poppins font-[600] rounded-full hover:bg-[#ffffff10]",
         common:
-          "rounded-full !h-[58px] !text-[16px] !font-[500] bg-[#8A50D6] hover:bg-[#9d63e9]",
+          "rounded-full !h-[58px] !text-[16px] !font-[500] ",
         animation:
           "border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 animation-button !border-[#604683] !bg-[#381E5B] !h-[48px] md:!h-[58px] !w-full md:!w-[220px] rounded-[8px] font-bold",
       },

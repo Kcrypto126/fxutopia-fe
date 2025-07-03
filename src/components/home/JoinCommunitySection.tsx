@@ -18,9 +18,9 @@ const JoinCommunitySection = () => {
               FX Utopia is more than a platform. It&apos;s a movement.
             </p>
             <Link href="/">
-            <Button variant="common" className="common-button !w-[269px]">
-              Join The Community
-            </Button>
+              <Button variant="common" className="login-button !w-[269px]">
+                Join The Community
+              </Button>
             </Link>
           </div>
         </div>

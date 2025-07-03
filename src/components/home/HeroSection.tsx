@@ -78,7 +78,7 @@ const HeroSection = () => {
         <Link href="/">
           <Button
             variant="common"
-            className="common-button !w-[247px] mt-[16px]"
+            className="login-button !w-[247px] mt-[16px]"
           >
             Join The Community
           </Button>
