@@ -14,7 +14,10 @@ const Community = () => {
         alt="hero-top"
         className="w-[300%] absolute top-0 left-[50%] -translate-x-[55%] z-0 min-w-[1640px]"
       />
-      <div className="relative z-10">community</div>
+      <div className="relative z-10 flex flex-col gap-6 md:gap-20">
+        <div>sdf</div>
+        <div>sdf</div>
+      </div>
     </Container>
   );
 };
