@@ -31,7 +31,7 @@ const FaqSection = () => {
             width={420}
             height={380}
             alt="utopia"
-            className="w-[420px] mx-auto mt-6 -ml-3 block lg:hidden"
+            className="w-[420px] mt-6 -ml-3 block lg:hidden"
           />
         </div>
       </div>

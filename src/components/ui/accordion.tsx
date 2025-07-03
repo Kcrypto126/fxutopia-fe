@@ -39,7 +39,7 @@ function AccordionTrigger({
         data-slot="accordion-trigger"
         className={cn(
           "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-90",
-          "text-[16px] md:text-[20px] font-[500] leading-[110%] rounded-full py-4 md:py-6 px-5 md:px-7",
+          "text-[16px] md:text-[20px] font-[500] leading-[110%] rounded-full py-4 md:py-6 px-5 md:px-7 cursor-pointer",
           className
         )}
         {...props}
