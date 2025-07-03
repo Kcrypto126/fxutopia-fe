@@ -11,14 +11,10 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import {
   FaceBookIcon,
-  IconEye,
-  IconEyeOff,
   InstagramIcon,
   LinkedinIcon,
   YoutubeIcon,
@@ -71,7 +67,7 @@ const Footer = () => {
         className="absolute z-0 bottom-0 left-[50%] -translate-x-[50%]"
       />
       <div className="relative z-10 flex flex-col gap-8 md:gap-20">
-        <div className="flex flex-col lg:flex-row gap-21 justify-between items-center">
+        <div className="flex flex-col lg:flex-row gap-10 md:gap-21 justify-between items-center">
           <div className="flex-1 w-full space-y-2">
             <h5 className="font-riosark text-[30px] md:text-[40px] xl:text-[56px] leading-[120%] uppercase text-center lg:text-start">
               Never Miss a Market Move Again
