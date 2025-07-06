@@ -22,10 +22,11 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         login:
           "!h-[48px] !px-6 !text-[16px] !font-poppins font-[600] rounded-full hover:bg-[#ffffff10]",
-        common:
-          "rounded-full !h-[58px] !text-[16px] !font-[500] ",
+        common: "rounded-full !h-[58px] !text-[16px] !font-[500] ",
         animation:
           "border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 animation-button !border-[#604683] !bg-[#381E5B] !h-[48px] md:!h-[58px] !w-full md:!w-[220px] rounded-[8px] font-bold",
+        filter:
+          "flex items-center gap-4 rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] !px-0 !py-0 lg:!px-7 !w-11 !h-11 lg:!w-auto lg:!h-[52px] hover:shadow-none",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

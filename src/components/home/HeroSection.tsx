@@ -23,7 +23,7 @@ const HeroSection = () => {
           width={519}
           height={519}
           alt="top-left"
-          className="absolute top-0 left-0 z-10 "
+          className="absolute top-0 left-0 z-10 w-auto h-auto"
         />
         <Image
           src="/assets/home/hero-right-top.png"
