@@ -1,8 +1,8 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 // Change the number type
@@ -10,14 +10,14 @@ export const formatLargeNumber = (num: number): string => {
   const absNum = Math.abs(num);
 
   if (absNum >= 1e9) {
-    return (num / 1e9).toFixed(2) + "B";
+    return num / 1e9 + "B";
   }
   if (absNum >= 1e6) {
-    return (num / 1e6).toFixed(2) + "M";
+    return num / 1e6 + "M";
   }
   if (absNum >= 1e3) {
-    return (num / 1e3).toFixed(2) + "K";
+    return num / 1e3 + "K";
   }
 
-  return num.toFixed(2);
+  return num.toString();
 };

@@ -204,18 +204,6 @@ img {
   background-color: rgb(160, 104, 233) !important;
 }
 
-/* .login-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  background: linear-gradient(180deg, #ffffff, #a262de);
-  border-radius: inherit;
-  
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-} */
-
 .login-button::before {
   content: "";
   position: absolute;
