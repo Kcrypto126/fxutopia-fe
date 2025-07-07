@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { ToggleIcon } from "../ui/icon";
+import { useNotification } from "@/providers/notificationProvider";
 
 const mainMenu: { title: string; link: string }[] = [
   {
@@ -47,6 +48,13 @@ const mainMenu: { title: string; link: string }[] = [
 ];
 
 const Header = () => {
+  const { toast } = useNotification();
+  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
+
+  const handleLogin = () => {
+    toast("Hi, john", "Success");
+  };
+
   return (
     <div className="w-full h-[64px] lg:h-[112px] fixed left-0 top-0 flex items-center z-50 px-3 bg-[#00000040] backdrop-blur-sm">
       <div className="max-w-[1440px] w-full m-auto flex gap-2 items-center justify-between">
@@ -56,7 +64,7 @@ const Header = () => {
             width={200}
             height={56}
             alt="logo"
-            className="max-w-[170px] lg:max-w-[200px] w-full h-auto"
+            className="max-w-[170px] lg:max-w-[200px] w-full"
           />
         </Link>
         <NavigationMenu viewport={false} className="hidden lg:block">
@@ -72,7 +80,7 @@ const Header = () => {
         </NavigationMenu>
 
         <div className="block lg:hidden">
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
@@ -88,7 +96,7 @@ const Header = () => {
               <SheetHeader className="z-20">
                 <SheetTitle className="flex justify-center">
                   <Link href="/">
-                    <Image src="/logo.png" width={200} height={56} alt="logo" />
+                    <Image src="/logo.png" width={170} height={56} alt="logo" />
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -97,14 +105,7 @@ const Header = () => {
                   <Link
                     key={item.title}
                     href={item.link}
-                    onClick={() => {
-                      const sheetClose = document.querySelector(
-                        '[data-slot="sheet-close"]'
-                      ) as HTMLButtonElement;
-                      if (sheetClose) {
-                        sheetClose.click();
-                      }
-                    }}
+                    onClick={() => setIsSheetOpen(false)}
                     className="py-2 px-4 flex items-center gap-4 rounded-[8px] hover:bg-gradient-to-b from-[#9387E3] to-[#6C5DD3] transition-all duration-200 hover:scale-105"
                   >
                     {/* {item.icon} */}
@@ -121,6 +122,9 @@ const Header = () => {
             <Button
               variant="login"
               className="login-button !bg-transparent hover:!bg-transparent"
+              onClick={() => {
+                handleLogin();
+              }}
             >
               Login
             </Button>

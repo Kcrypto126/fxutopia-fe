@@ -8,16 +8,9 @@ import { CategorySection } from "@/components/community/CategorySection";
 import CategoryDescriptionSection from "@/components/community/CategoryDescriptionSection";
 import LatestDiscussionSection from "@/components/community/LatestDiscussionSection";
 
-const Categories = [
-  {
-    icon: "",
-    text: "",
-  },
-];
-
 const Community = () => {
   return (
-    <Container className="relative z-0 py-20 lg:pt-48 lg:pb-32">
+    <Container className="relative z-0 py-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <Image
         src="/assets/home/hero-top.png"
         width={1840}
