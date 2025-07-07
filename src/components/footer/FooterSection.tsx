@@ -59,7 +59,7 @@ const FooterSection = () => {
         width={1600}
         height={500}
         alt="footer"
-        className="absolute z-0 bottom-0 left-[50%] -translate-x-[50%]"
+        className="absolute z-0 bottom-0 left-[50%] -translate-x-[50%] w-auto h-auto"
       />
       <div className="relative z-10 flex flex-col gap-8 md:gap-20">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-21 justify-between items-center">
@@ -115,7 +115,7 @@ const FooterSection = () => {
         <div
           className="flex lg:hidden items-center w-fit px-3 py-3 mx-auto border-[1px] border-[#604683] rounded-[8px] gap-3 cursor-pointer"
           onClick={() => {
-            router.push("/");
+            router.push("#");
           }}
         >
           <IconChevronUp width="22" height="22" />

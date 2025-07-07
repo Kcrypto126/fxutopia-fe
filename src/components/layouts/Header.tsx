@@ -56,7 +56,7 @@ const Header = () => {
             width={200}
             height={56}
             alt="logo"
-            className="max-w-[170px] lg:max-w-[200px]"
+            className="max-w-[170px] lg:max-w-[200px] w-full h-auto"
           />
         </Link>
         <NavigationMenu viewport={false} className="hidden lg:block">
