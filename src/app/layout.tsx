@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
+import React from "react";
 import Provider from "@/providers";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
+import PageLayout from "@/components/layouts/PageLayout";
 
+// Font setup
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -55,7 +60,11 @@ export default function RootLayout({
       <body
         className={`font-satoshi ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} antialiased`}
       >
-        <Provider>{children}</Provider>
+        <Provider>
+          <Header />
+          <PageLayout>{children}</PageLayout>
+          <Footer />
+        </Provider>
       </body>
     </html>
   );
