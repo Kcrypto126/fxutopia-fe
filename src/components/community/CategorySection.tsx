@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Check, ChevronDown, ChevronsUpDown } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -203,7 +203,7 @@ export function CategorySection() {
   const [value, setValue] = React.useState("");
 
   return (
-    <div className="w-full h-fit p-6 rounded-[28px] bg-[#381E5B60] max-w-full lg:max-w-[320px]">
+    <div className="w-full h-fit p-0 lg:p-6 rounded-[28px] bg-transparent lg:bg-[#381E5B60] max-w-full lg:max-w-[320px]">
       <div className="w-full hidden lg:block">
         <div className=" w-full flex items-center justify-between gap-2 py-3">
           <h5 className="text-[20px] font-bold">Categories</h5>
@@ -223,26 +223,29 @@ export function CategorySection() {
           ))}
         </ul>
       </div>
-      <div className="w-full block lg:hidden">
+      <div className="w-full flex justify-center sm:justify-start lg:hidden">
         <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
+          <PopoverTrigger
+            asChild
+            className="!mx-auto !px-5 h-12 border-[1px] !border-[#9862DB] !bg-[#512F7C40] hover:!bg-[#6b439f40] rounded-full"
+          >
             <Button
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-[200px] justify-between"
+              className="max-w-[90vw] sm:max-w-[471px] w-full justify-between hover:shadow-none"
             >
               {value
                 ? Categories.find((item) => item.label === value)?.label
-                : "Select framework..."}
-              <ChevronsUpDown className="opacity-50" />
+                : "Select category..."}
+              <ChevronDown />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-0">
+          <PopoverContent className="!w-[90vw] sm:!w-[471px] border p-0">
             <Command>
-              <CommandInput placeholder="Search framework..." className="h-9" />
+              <CommandInput placeholder="Search category..." className="h-9" />
               <CommandList>
-                <CommandEmpty>No framework found.</CommandEmpty>
+                <CommandEmpty>No category found.</CommandEmpty>
                 <CommandGroup>
                   {Categories.map((item) => (
                     <CommandItem
