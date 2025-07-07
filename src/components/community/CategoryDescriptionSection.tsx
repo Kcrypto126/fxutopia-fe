@@ -1,6 +1,7 @@
 "use client";
 
 import { ClockIcon, DiskIcon } from "../ui/icon";
+import Link from "next/link";
 
 import { Descriptions } from "./data";
 
@@ -17,12 +18,14 @@ const CategoryDescriptionSection = () => {
           } pb-10 border-[#FFFFFF50]`}
         >
           <div className="flex justify-between gap-2 items-center">
-            <h5
-              className={`text-[20px] md:text-[36px] font-[500]`}
-              style={{ color: item.color }}
-            >
-              {item.title}
-            </h5>
+            <Link href="/community/individual-category">
+              <h5
+                className="text-[20px] md:text-[36px] font-[500] hover:opacity-70 transition-all duration-300 "
+                style={{ color: item.color }}
+              >
+                {item.title}
+              </h5>
+            </Link>
             <div className="flex gap-2 items-center">
               <ClockIcon />
               <h5 className="text-[20px] md:text-[24px] font-[500] text-[#FFFFFF50]">{`${item.week} / week`}</h5>

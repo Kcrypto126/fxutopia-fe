@@ -433,3 +433,62 @@ export const Descriptions = [
     tags: [],
   },
 ];
+
+/////////////////////////////////////////////////////////Thread///////////////////////////////////////////////
+
+export const Threads = [
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-4.png",
+      full_name: "John Veetle",
+      username: "System",
+    },
+    date: "May 2025",
+    post: "This forum is for forex beginners. If you are new to forex and have a question, this is the best place to ask it. If you're looking to learn forex, get your training and education at the School of Pipsology.",
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-8.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-6.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply: "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-4.png",
+      full_name: "John Veetle",
+      username: "System",
+    },
+    date: "May 2025",
+    post: "This forum is for forex beginners. If you are new to forex and have a question, this is the best place to ask it. If you're looking to learn forex, get your training and education at the School of Pipsology.",
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-8.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-6.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply: "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+];

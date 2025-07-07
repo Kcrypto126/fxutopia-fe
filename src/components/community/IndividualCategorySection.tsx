@@ -82,7 +82,11 @@ const IndividualCategorySection = () => {
           >
             <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row justify-start md:justify-between lg:justify-start xl:justify-between gap-4">
               <div className="flex items-center justify-start gap-3">
-                <h5 className="text-[18px] xl:text-[26px]">{item.title}</h5>
+                <Link href="/community/individual-category/thread">
+                  <h5 className="text-[18px] xl:text-[26px] hover:text-[#be93f3] transition-all duration-300">
+                    {item.title}
+                  </h5>
+                </Link>
                 <IconHeartFilled
                   color={`${item.favorite ? "#9441FE" : "#656565"}`}
                 />
