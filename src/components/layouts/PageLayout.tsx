@@ -34,6 +34,21 @@ const PageLayout = ({
         alt="right-left"
         className="absolute top-0 right-0 -z-10 w-auto h-auto"
       />
+      <Image
+        src="/assets/community/community-left.png"
+        width={502}
+        height={1300}
+        alt="right-left"
+        className="absolute bottom-0 left-0 -z-10 w-auto h-auto"
+      />
+      <Image
+        src="/assets/community/community-right.png"
+        width={502}
+        height={1300}
+        alt="right-left"
+        className="absolute top-[30%] right-0 -z-10 w-auto h-auto"
+      />
+
       {children}
     </div>
   );

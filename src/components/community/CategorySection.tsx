@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Check, ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -199,6 +200,7 @@ const Categories = [
 ];
 
 const CategorySection = () => {
+  const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -254,6 +256,7 @@ const CategorySection = () => {
                       onSelect={(currentValue) => {
                         setValue(currentValue === value ? "" : currentValue);
                         setOpen(false);
+                        router.push("/community/individual-category");
                       }}
                     >
                       {item.label}
