@@ -1,7 +1,5 @@
 "use client";
 
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import BrandSection from "@/components/home/BrandSection";
 import TrustedSection from "@/components/home/TrustedSection";
@@ -18,7 +16,6 @@ import FaqSection from "@/components/home/FaqSection";
 export default function Home() {
   return (
     <>
-      <Header />
       <HeroSection />
       <BrandSection />
       <TrustedSection />
@@ -31,7 +28,6 @@ export default function Home() {
       <ReviewSection />
       <BlogSection />
       <FaqSection />
-      <Footer />
     </>
   );
 }

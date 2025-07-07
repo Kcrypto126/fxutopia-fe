@@ -6,32 +6,8 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div
-      className="relative w-full flex items-end overflow-hidden z-0"
-      id="home"
-    >
+    <div className="relative w-full flex items-end overflow-hidden" id="home">
       <div className="absolute top-0 left-0 w-full h-full select-none">
-        <Image
-          src="/assets/home/hero-top.png"
-          width={1840}
-          height={800}
-          alt="hero-top"
-          className="w-[300%] absolute top-0 left-[50%] -translate-x-[55%] z-0 min-w-[1640px]"
-        />
-        <Image
-          src="/assets/home/hero-left-top-light.png"
-          width={519}
-          height={519}
-          alt="top-left"
-          className="absolute top-0 left-0 z-10 w-auto h-auto"
-        />
-        <Image
-          src="/assets/home/hero-right-top.png"
-          width={502}
-          height={580}
-          alt="right-left"
-          className="absolute top-0 right-0 z-10"
-        />
         <Image
           src="/assets/home/hero-left.png"
           width={259}
