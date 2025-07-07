@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
-
 import Container from "@/components/layouts/Container";
 import FilterSection from "@/components/community/FilterSection";
-import { CategorySection } from "@/components/community/CategorySection";
+import CategorySection from "@/components/community/CategorySection";
 import CategoryDescriptionSection from "@/components/community/CategoryDescriptionSection";
 import LatestDiscussionSection from "@/components/community/LatestDiscussionSection";
 

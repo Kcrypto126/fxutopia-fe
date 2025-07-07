@@ -198,7 +198,7 @@ const Categories = [
   },
 ];
 
-export function CategorySection() {
+const CategorySection = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -213,7 +213,7 @@ export function CategorySection() {
           {Categories.map((item) => (
             <li key={item.label}>
               <Link
-                href={`/community${item.link}`}
+                href={`/community/individual-category`}
                 className="flex items-center gap-[14px]"
               >
                 {item.icon}
@@ -273,4 +273,6 @@ export function CategorySection() {
       </div>
     </div>
   );
-}
+};
+
+export default CategorySection;
