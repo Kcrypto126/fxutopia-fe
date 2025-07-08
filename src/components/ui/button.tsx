@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer hover:shadow-[0_0_15px_#ffffff90] justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
@@ -26,8 +26,9 @@ const buttonVariants = cva(
         animation:
           "border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 animation-button !border-[#604683] !bg-[#381E5B] !h-[48px] md:!h-[58px] !w-full md:!w-[220px] rounded-[8px] font-bold",
         filter:
-          "flex items-center gap-4 rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] !px-0 !py-0 lg:!px-7 !w-11 !h-11 lg:!w-auto lg:!h-[52px] hover:shadow-none",
+          "flex items-center gap-4 rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] !px-0 !py-0 lg:!px-7 !w-11 !h-11 lg:!w-auto lg:!h-[52px]",
         back: "flex gap-0 items-center rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] border-[1px] border-[#9862DB] !p-0 !w-9 lg:!w-[94px] !h-9 lg:!h-[54px]",
+        hover: "hover:shadow-[0_0_15px_#ffffff90]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

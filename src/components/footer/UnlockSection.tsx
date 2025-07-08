@@ -29,7 +29,7 @@ const UnlockSection = () => {
             <Link href="/">
               <Button
                 variant="common"
-                className="common-button w-full md:!w-[204px] bg-[#1283FF] hover:bg-[#288efc]"
+                className="common-button w-full md:!w-[204px] bg-[#1283FF] hover:bg-[#2d91fb]"
               >
                 Join FX Utopia
               </Button>

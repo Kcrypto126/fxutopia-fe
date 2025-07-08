@@ -8,6 +8,7 @@ import {
   IconHeartFilled,
   IconPlus,
 } from "@tabler/icons-react";
+import CreatePost from "../post/CreatePost";
 
 const FilterSection = () => {
   return (
@@ -40,18 +41,8 @@ const FilterSection = () => {
           />
           <h5 className="text-[16px] font-[500] hidden lg:block">Favorite</h5>
         </Button>
-        <Button
-          variant="filter"
-          className="!bg-[#381E5B] hover:!bg-[#402366] border-[1px] border-[#9862DB] !w-fit !px-4 flex gap-2"
-        >
-          <IconPlus
-            width="32"
-            height="32"
-            color="#9862DB"
-            className="!w-6 !h-6 lg:!w-8 lg:!h-8"
-          />
-          <h5 className="text-[16px] font-[500]">Create New Post</h5>
-        </Button>
+        
+        <CreatePost />
       </div>
       <div className="relative flex items-center max-w-[90vw] sm:max-w-[471px] w-full">
         <span className="absolute left-4 sm:left-6 text-gray-400">

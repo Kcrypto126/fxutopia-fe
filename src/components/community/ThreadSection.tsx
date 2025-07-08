@@ -182,7 +182,7 @@ const ThreadSection = () => {
 
         <Button
           variant="common"
-          className="login-button w-full md:!w-[287px] hover:shadow-none"
+          className="login-button w-full md:!w-[287px]"
           onClick={() => {
             showMore();
           }}
