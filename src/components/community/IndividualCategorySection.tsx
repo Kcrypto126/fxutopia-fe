@@ -147,7 +147,7 @@ const IndividualCategorySection = () => {
         ))}
         <Button
           variant="common"
-          className="login-button w-full md:!w-[269px] hover:shadow-none"
+          className="login-button w-full md:!w-[269px]"
           onClick={() => {
             showMore();
           }}

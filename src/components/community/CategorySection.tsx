@@ -235,7 +235,7 @@ const CategorySection = () => {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="max-w-[90vw] sm:max-w-[471px] w-full justify-between hover:shadow-none"
+              className="max-w-[90vw] sm:max-w-[471px] w-full justify-between"
             >
               {value
                 ? Categories.find((item) => item.label === value)?.label

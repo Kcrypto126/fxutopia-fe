@@ -439,20 +439,21 @@ export const Descriptions = [
 export const Threads = [
   {
     user: {
-      avatar: "/assets/avatars/avatar-4.png",
+      avatar: "/assets/avatars/avatar-2.png",
       full_name: "John Veetle",
       username: "System",
     },
     date: "May 2025",
     post: "This forum is for forex beginners. If you are new to forex and have a question, this is the best place to ask it. If you're looking to learn forex, get your training and education at the School of Pipsology.",
+    favorites: 153,
     replies: [
       {
         user: {
-          avatar: "/assets/avatars/avatar-8.png",
+          avatar: "/assets/avatars/avatar-9.png",
           full_name: "John Veetle",
           username: "Pawansingh143",
         },
-        reply: "Is forex trading real or a scam?",
+        reply_message: "Is forex trading real or a scam?",
       },
       {
         user: {
@@ -460,7 +461,8 @@ export const Threads = [
           full_name: "John Veetle",
           username: "Christinandih",
         },
-        reply: "Where do I go to start the forex lessons for beginners?",
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
       },
     ],
   },
@@ -468,26 +470,173 @@ export const Threads = [
     user: {
       avatar: "/assets/avatars/avatar-4.png",
       full_name: "John Veetle",
-      username: "System",
+      username: "TradeDin",
     },
-    date: "May 2025",
-    post: "This forum is for forex beginners. If you are new to forex and have a question, this is the best place to ask it. If you're looking to learn forex, get your training and education at the School of Pipsology.",
+    date: "Jun 2025",
+    post: "Any ideas on the best platforms to practice on? From the UK",
+    favorites: 123,
     replies: [
       {
         user: {
-          avatar: "/assets/avatars/avatar-8.png",
+          avatar: "/assets/avatars/avatar-5.png",
           full_name: "John Veetle",
           username: "Pawansingh143",
         },
-        reply: "Is forex trading real or a scam?",
+        reply_message: "Is forex trading real or a scam?",
       },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-14.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-5.png",
+      full_name: "John Veetle",
+      username: "Pippie_Longandshortstocking",
+    },
+    date: "Jun 2025",
+    post: "Is a signal to buy USDJPY the same as a signal to sell JPYUSD? (the signalfinder I've been using has these pairs in the reverse order of the pairs on my iPhone Metatrader). Thank you.",
+    favorites: 113,
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-7.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply_message: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-13.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-2.png",
+      full_name: "John Veetle",
+      username: "alikojan",
+    },
+    date: "Jun 2025",
+    post: "I think metatrader4 or 5 is the best for practice. Good luck :slight_smile:",
+    favorites: 173,
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-4.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply_message: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-12.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-10.png",
+      full_name: "John Veetle",
+      username: "Pipcrawler",
+    },
+    date: "Jun 2025",
+    post: "Ask anything, but it's a good idea to get educated first. Have you been through the School of Pipsology to learn the fundamental skills of analysis and trading?",
+    favorites: 173,
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-3.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply_message: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-11.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-11.png",
+      full_name: "John Veetle",
+      username: "anon12283618",
+    },
+    date: "Jun 2025",
+    post: "Hello, I am currently practicing on a Demo account through XM and I am using candlesticks in my charts, however I think the colours may be reversed, it is displaying bullish candles as black and bearish candles as white, should it not be the other way around (according to what is taught by babypips)?",
+    favorites: 53,
+    replies: [
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-2.png",
+          full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply_message: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-9.png",
+          full_name: "John Veetle",
+          username: "Christinandih",
+        },
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
+      },
+    ],
+  },
+  {
+    user: {
+      avatar: "/assets/avatars/avatar-12.png",
+      full_name: "John Veetle",
+      username: "Gayan123",
+    },
+    date: "July 2025",
+    post: "You can change it. You can select the colours you prefer for bearish and bullish candles. For example, I am using red for bear and green for bull.",
+    favorites: 83,
+    replies: [
       {
         user: {
           avatar: "/assets/avatars/avatar-6.png",
           full_name: "John Veetle",
+          username: "Pawansingh143",
+        },
+        reply_message: "Is forex trading real or a scam?",
+      },
+      {
+        user: {
+          avatar: "/assets/avatars/avatar-4.png",
+          full_name: "John Veetle",
           username: "Christinandih",
         },
-        reply: "Where do I go to start the forex lessons for beginners?",
+        reply_message:
+          "Where do I go to start the forex lessons for beginners?",
       },
     ],
   },

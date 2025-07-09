@@ -51,7 +51,7 @@ export function FaqAccordion() {
       {FAQs.map((item, index) => (
         <AccordionItem key={index} value={`item-${index + 1}`}>
           <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-4 text-balance">
+          <AccordionContent className="flex flex-col gap-4 text-balance px-5 md:px-7">
             <p>{item.answer}</p>
           </AccordionContent>
         </AccordionItem>
