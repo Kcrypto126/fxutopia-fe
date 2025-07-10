@@ -18,6 +18,16 @@ interface BlogProps {
 
 const BlogSection = ({ data }: { data: BlogProps[] }) => {
   const [searchValue, setSearchValue] = useState("");
+  const [newData, setNewData] = useState<BlogProps[]>(data);
+
+  const searchBlog = (key: string) => {
+    setSearchValue(key);
+    setNewData(
+      data.filter((item) =>
+        item.title.toLowerCase().includes(key.toLowerCase())
+      )
+    );
+  };
 
   return (
     <Container className="py-8 md:py-30">
@@ -67,12 +77,12 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
                 className="h-[52px] w-full border-[1px] border-[#9862DB] !bg-[#512F7C66] rounded-full placeholder:text-[18px] pl-12 pr-6"
                 value={searchValue}
                 onChange={(e) => {
-                  setSearchValue(e.target.value);
+                  searchBlog(e.target.value);
                 }}
               />
             </div>
           </div>
-          <BlogCards data={data} />
+          <BlogCards data={newData} />
         </div>
       </div>
     </Container>
