@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import Container from "../layouts/Container";
@@ -44,12 +45,14 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
               ability to quickly and accurately execute trades, evaluate large
               amounts of data, and forecast market patterns.
             </p>
-            <Button variant="common" className="login-button w-[203px] mt-4">
-              Show More
-            </Button>
+            <Link href="#more-blog">
+              <Button variant="common" className="login-button w-[203px] mt-4">
+                Show More
+              </Button>
+            </Link>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col" id="more-blog">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <h1 className="!text-center md:!text-start">Our Recent Blogs</h1>
             <div className="relative flex items-center max-w-[90vw] sm:max-w-[471px] w-full">
