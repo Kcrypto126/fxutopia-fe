@@ -44,7 +44,7 @@ const mainMenu: { title: string; link: string }[] = [
   },
   {
     title: "Blog",
-    link: "/blog",
+    link: "/blogs",
   },
 ];
 

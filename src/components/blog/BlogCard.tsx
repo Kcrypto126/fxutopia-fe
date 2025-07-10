@@ -1,16 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import Container from "../layouts/Container";
 import { useState } from "react";
-import { IconLoader2 } from "@tabler/icons-react";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
@@ -45,9 +43,11 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
               {item.title}
             </h5>
             <p className="text-[16px] md:text-[20px]">{item.description}</p>
-            <Button variant="common" className="login-button w-fit px-6 !h-9">
-              {item.action}
-            </Button>
+            <Link href="/blogs/blog">
+              <Button variant="common" className="login-button w-fit px-6 !h-9">
+                {item.action}
+              </Button>
+            </Link>
           </div>
         ))}
       </div>
