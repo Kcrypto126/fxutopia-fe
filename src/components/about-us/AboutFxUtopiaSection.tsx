@@ -19,8 +19,8 @@ const AboutFxUtopiaSection = () => {
             About FX Utopia
           </h1>
           <p>
-            At FX Utopia, we're building something more than just a trading
-            platform. We're creating a digital ecosystem — a hub where traders
+            At FX Utopia, we&apos;re building something more than just a trading
+            platform. We&apos;re creating a digital ecosystem — a hub where traders
             learn, grow, and thrive together.
             <br />
             <br /> Born out of frustration with misleading “get-rich-quick”
@@ -29,8 +29,8 @@ const AboutFxUtopiaSection = () => {
             money, to learn the hard way — and ultimately, to succeed through
             discipline, strategy, and support. <br />
             <br />
-            We believe that trading success isn't about luck — it's about
-            knowledge, tools, and community. That's what we offer. That's what
+            We believe that trading success isn&apos;t about luck — it&apos;s about
+            knowledge, tools, and community. That&apos;s what we offer. That&apos;s what
             we stand for.
           </p>
           <h1 className="!text-[20px] md:!text-[30px] !text-start md:!text-center lg:!text-start !text-[#9441FE]">

@@ -5,7 +5,6 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import WhyUtopiaCard from "./WhyUtopiaCard";
 import {
   TraderIcon,
   EducationIcon,
@@ -15,7 +14,6 @@ import {
 } from "../ui/icon";
 
 type PropType = {
-  slides: number[];
   options?: EmblaOptionsType;
 };
 
@@ -53,7 +51,7 @@ const WhyFxs = [
 ];
 
 const TopTraderCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+  const { options } = props;
   const [emblaRef] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 }),
   ]);

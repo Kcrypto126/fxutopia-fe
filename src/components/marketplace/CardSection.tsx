@@ -43,8 +43,11 @@ const CardSection = ({
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9">
-          {data.slice(0, Number).map((item) => (
-            <div className="group flex flex-col justify-between gap-4 md:gap-6 p-3 md:p-6 border-[1px] border-[#361056] bg-gradient-to-b from-[#2B0A47] to-[#09030E] hover:bg-[#381E5B] hover:bg-none hover:border-[#604683] rounded-[22px] cursor-pointer transition-colors transition-border duration-300">
+          {data.slice(0, Number).map((item, index) => (
+            <div
+              key={index}
+              className="group flex flex-col justify-between gap-4 md:gap-6 p-3 md:p-6 border-[1px] border-[#361056] bg-gradient-to-b from-[#2B0A47] to-[#09030E] hover:bg-[#381E5B] hover:bg-none hover:border-[#604683] rounded-[22px] cursor-pointer transition-colors transition-border duration-300"
+            >
               <div className="featured-img w-full !rounded-[11px] overflow-hidden h-[295px] bg-[#ffffff14] flex justify-center items-center transition-colors duration-300 group-hover:bg-[#ffffff34]">
                 <Image
                   src={item.featured_image}

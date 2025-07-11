@@ -4,11 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-interface HeroProps {
-  title: string;
-  description: string;
-}
-
 const HeroSection = () => {
   return (
     <div className="relative w-full flex items-end overflow-hidden" id="home">
@@ -49,7 +44,7 @@ const HeroSection = () => {
             Where Traders Learn, Grow & Thrive Together
           </h5>
           <p className="!text-center lg:!text-start max-w-[744px]">
-            At FX Utopia, we're building more than just a platform — we're
+            At FX Utopia, we&apos;re building more than just a platform — we&apos;re
             creating a home for Forex and Crypto enthusiasts who value real
             education, powerful tools, and a strong community.
           </p>

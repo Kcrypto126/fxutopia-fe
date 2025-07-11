@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import React from "react";
-import ReactDOM from "react-dom/client";
 import WhyFxUtopiaCarousel from "./WhyFxUtopiaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 
 import "./css/embla.css";
 
 const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const WhyFxUtopiaSection = () => {
   return (
@@ -27,12 +24,12 @@ const WhyFxUtopiaSection = () => {
           <h1 className="!text-center lg:!text-start">Why FX Utopia?</h1>
           <p className="max-w-full lg:max-w-[560px] !text-center lg:!text-start">
             Unlock your trading potential with a platform designed for learning,
-            growth, and real results. Whether you're just starting out or
+            growth, and real results. Whether you&apos;re just starting out or
             scaling up, FX Utopia gives you the tools, knowledge, and support to
             succeed.
           </p>
         </div>
-        <WhyFxUtopiaCarousel slides={SLIDES} options={OPTIONS} />
+        <WhyFxUtopiaCarousel options={OPTIONS} />
       </div>
       <div className="relative z-0 max-w-[1440px] w-full mx-auto">
         <Image
@@ -62,13 +59,13 @@ const WhyFxUtopiaSection = () => {
           </h1>
           <p className="max-w-[826px] !text-center mt-3 md:mt-6">
             At FX Utopia, our team is made up of experienced Forex and Crypto
-            traders, educators, developers, and market analysts. We've lived the
+            traders, educators, developers, and market analysts. We&apos;ve lived the
             journey — from beginner confusion to breakthrough moments.
             <br />
-            <br /> That's why our platform is built with real-world experience,
+            <br /> That&apos;s why our platform is built with real-world experience,
             not theory. Every tool, course, and community feature is created to
-            solve problems we've faced ourselves. We don't just talk about
-            trading — we've been in the markets, and we know what truly helps.
+            solve problems we&apos;ve faced ourselves. We don&apos;t just talk about
+            trading — we&apos;ve been in the markets, and we know what truly helps.
           </p>
           <Image
             src="/assets/about-us/snipet-1.png"

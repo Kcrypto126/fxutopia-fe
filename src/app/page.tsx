@@ -24,7 +24,7 @@ export default function Home() {
       <TopTradersSection />
       <TradingCommandSection />
       <MarketplaceSection />
-      <JoinCommunitySection />
+      <JoinCommunitySection color="#00000000" />
       <ReviewSection />
       <BlogSection />
       <FaqSection />

@@ -10,28 +10,18 @@ import {
   DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -92,7 +82,11 @@ const CreatePost = () => {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
+    setIsSubmitting(true);
+    setTimeout(() => {
+      console.log(data);
+      setIsSubmitting(false);
+    });
   }
 
   return (
