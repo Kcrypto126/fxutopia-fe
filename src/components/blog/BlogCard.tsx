@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import Container from "../layouts/Container";
 import { useState } from "react";
 import {
   Pagination,
