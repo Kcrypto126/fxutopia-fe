@@ -336,3 +336,16 @@ svg.social-icon:hover circle {
     height: 32px;
   }
 }
+
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 640px) {
+  .truncate-multiline {
+    -webkit-line-clamp: 2;
+  }
+}

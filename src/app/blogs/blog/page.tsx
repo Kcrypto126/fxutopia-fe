@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Container from "@/components/layouts/Container";
-import TextTruncate from "react-text-truncate";
 
 import { Blogs as BlogData } from "@/components/blog/data";
 
@@ -58,22 +57,7 @@ const Blog = () => {
                     <h5 className="text-[16px] sm:text-[18px] font-[700] leading-[120%]">
                       {item.title}
                     </h5>
-                    <div className="hidden sm:block">
-                      <TextTruncate
-                        line={3}
-                        element="p"
-                        truncateText="…"
-                        text={item.description}
-                      />
-                    </div>
-                    <div className="block sm:hidden">
-                      <TextTruncate
-                        line={1}
-                        element="p"
-                        truncateText="…"
-                        text={item.description}
-                      />
-                    </div>
+                    <p className="truncate-multiline">{item.description}</p>
                   </div>
                 </div>
               </Link>
