@@ -12,7 +12,7 @@ const Footer = () => {
   }
 
   return (
-    <div>
+    <div className="pt-8">
       <UnlockSection />
       <FooterSection />
     </div>

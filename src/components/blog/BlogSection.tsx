@@ -30,7 +30,7 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
   };
 
   return (
-    <Container className="py-8 md:py-30">
+    <Container className="py-8 md:pt-30 md:pb-14">
       <div className="flex flex-col gap-15 md:gap-25">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20">
           <Image
@@ -62,7 +62,7 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col" id="more-blog">
+        <div className="flex flex-col gap-8 lg:gap-20" id="more-blog">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <h1 className="!text-center md:!text-start">Our Recent Blogs</h1>
             <div className="relative flex items-center max-w-[90vw] sm:max-w-[471px] w-full">
