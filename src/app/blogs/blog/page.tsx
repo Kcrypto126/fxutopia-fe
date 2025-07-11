@@ -45,11 +45,8 @@ const Blog = () => {
           <h5 className="text-[26px]">Related Blogs</h5>
           <div className="flex flex-col gap-6">
             {BlogData.map((item, index) => (
-              <Link href="/blogs/blog">
-                <div
-                  key={index}
-                  className="p-4 flex gap-4 bg-[#000000] hover:bg-[#222222] rounded-[12px] w-full h-full cursor-pointer transition-all duration-200"
-                >
+              <Link href="/blogs/blog" key={index}>
+                <div className="p-4 flex gap-4 bg-[#000000] hover:bg-[#222222] rounded-[12px] w-full h-full cursor-pointer transition-all duration-200">
                   <Image
                     src={item.featured_image}
                     width={154}

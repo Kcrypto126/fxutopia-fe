@@ -13,7 +13,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import {
@@ -24,7 +23,7 @@ import {
 } from "@/components/ui/icon";
 import Container from "../layouts/Container";
 
-import { IconFileIsr, IconLoader2, IconPlus } from "@tabler/icons-react";
+import { IconLoader2 } from "@tabler/icons-react";
 
 // Example schema for creating a post
 const FormSchema = z.object({
@@ -58,7 +57,11 @@ const ContactUsSection = () => {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
+    setIsSubmitting(true);
+    setTimeout(() => {
+      console.log(data);
+      setIsSubmitting(false);
+    });
   }
 
   return (
