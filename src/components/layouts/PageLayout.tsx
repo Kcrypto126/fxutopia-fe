@@ -48,7 +48,6 @@ const PageLayout = ({
         alt="right-left"
         className="absolute top-[30%] right-0 -z-10 w-auto h-auto"
       />
-
       {children}
     </div>
   );

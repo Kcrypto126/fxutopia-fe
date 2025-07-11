@@ -25,7 +25,7 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
   const [toNumber, setToNumber] = useState(9);
 
   return (
-    <Container className="py-8 md:py-20 !px-0">
+    <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9">
         {data.slice(fromNumber, toNumber).map((item, index) => (
           <div
@@ -120,7 +120,7 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
           </div>
         </PaginationContent>
       </Pagination>
-    </Container>
+    </div>
   );
 };
 
