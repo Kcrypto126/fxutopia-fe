@@ -40,7 +40,9 @@ const HeroSection = () => {
 
       <div className="max-w-[1440px] mx-auto w-full min-h-fit md:min-h-[888px] px-3 py-30 relative z-30 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
-          
+        <h5 className="text-[30px] md:text-[40px] xl:text-[70px] !text-center lg:!text-start uppercase font-riosark font-[400] leading-[100%] bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#4E4EE41A] bg-clip-text text-transparent">
+            Where Traders Learn, Grow & Thrive Together
+          </h5>
           <p className="!text-center lg:!text-start max-w-[744px]">
             At FX Utopia, we&apos;re building more than just a platform — we&apos;re
             creating a home for Forex and Crypto enthusiasts who value real
