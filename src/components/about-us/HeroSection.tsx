@@ -54,7 +54,13 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-        
+        <Image
+          src="/assets/about-us/about-hero.png"
+          width={631}
+          height={527}
+          alt="about-hero"
+          className="w-[531px] h-auto xl:w-[631px] xl:auto"
+        />
       </div>
     </div>
   );
