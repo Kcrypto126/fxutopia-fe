@@ -33,9 +33,7 @@ const AboutFxUtopiaSection = () => {
             knowledge, tools, and community. That&apos;s what we offer. That&apos;s what
             we stand for.
           </p>
-          <h1 className="!text-[20px] md:!text-[30px] !text-start md:!text-center lg:!text-start !text-[#9441FE]">
-            Our Mission
-          </h1>
+          
           <p>
             To provide accessible, high-quality Forex & Crypto education,
             industry-leading tools, and a dynamic global community — so every
