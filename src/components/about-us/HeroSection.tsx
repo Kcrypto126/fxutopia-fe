@@ -49,9 +49,7 @@ const HeroSection = () => {
             education, powerful tools, and a strong community.
           </p>
           <Link href="/" className="mt-4 lg:mt-8">
-            <Button variant="common" className="login-button !w-[247px]">
-              Join The Community
-            </Button>
+            
           </Link>
         </div>
         <Image
