@@ -54,9 +54,7 @@ const WhyFxUtopiaSection = () => {
             alt="about-us"
             className="lg:-mb-15"
           />
-          <h1 className="max-w-[751px] !text-center">
-            Designed with Real Traders in Mind
-          </h1>
+          
           <p className="max-w-[826px] !text-center mt-3 md:mt-6">
             At FX Utopia, our team is made up of experienced Forex and Crypto
             traders, educators, developers, and market analysts. We&apos;ve lived the
