@@ -65,13 +65,7 @@ const WhyFxUtopiaSection = () => {
             solve problems we&apos;ve faced ourselves. We don&apos;t just talk about
             trading — we&apos;ve been in the markets, and we know what truly helps.
           </p>
-          <Image
-            src="/assets/about-us/snipet-1.png"
-            width={208}
-            height={80}
-            alt="snipet"
-            className="block lg:hidden mt-5"
-          />
+          
         </div>
       </div>
     </div>
