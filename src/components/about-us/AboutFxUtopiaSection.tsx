@@ -15,7 +15,9 @@ const AboutFxUtopiaSection = () => {
           className="w-[493px] xl:w-[593px] h-auto"
         />
         <div className="flex flex-col gap-2 md:gap-5 max-w-[701px]">
-          
+          <h1 className="!text-start md:!text-center lg:!text-start">
+            About FX Utopia
+          </h1>
           <p>
             At FX Utopia, we&apos;re building something more than just a trading
             platform. We&apos;re creating a digital ecosystem — a hub where traders
