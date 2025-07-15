@@ -5,7 +5,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import Container from "../layouts/Container";
 import SellersCarousel from "./SellersCarousel";
 
-import "./css/embla.css";
+import "./css/embla-rating.css";
 import { SLIDES } from "./data";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -20,7 +20,8 @@ const SellersSection = () => {
             Meet our company&apos;s most successful traders this month
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-4 lg:gap-6">
+          <SellersCarousel slides={SLIDES} options={OPTIONS} />
           <SellersCarousel slides={SLIDES} options={OPTIONS} />
         </div>
       </div>
