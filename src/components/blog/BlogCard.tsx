@@ -31,7 +31,15 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
             key={index}
             className="group flex flex-col justify-between gap-4 md:gap-6 p-3 md:p-6 border-[1px] border-[#361056] bg-gradient-to-b from-[#2B0A47] to-[#09030E] hover:bg-[#381E5B] hover:bg-none hover:border-[#604683] rounded-[22px] cursor-pointer transition-colors transition-border duration-300"
           >
-            
+            <div className="featured-img w-full !rounded-[11px] overflow-hidden h-[295px] bg-[#ffffff14] flex justify-center items-center transition-colors duration-300 group-hover:bg-[#ffffff34]">
+              <Image
+                src={item.featured_image}
+                width={406}
+                height={250}
+                alt="featured"
+                className="w-full h-[295px] object-cover"
+              />
+            </div>
             <h5 className="text-[20px] md:text-[30px] font-riosark font-[400] leading-[110%] uppercase">
               {item.title}
             </h5>
