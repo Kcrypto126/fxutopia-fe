@@ -4,6 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import Image from "next/image";
 
 import ReviewCarousel from "./ReviewCarousel";
+import "./css/embla.css";
 
 const OPTIONS1: EmblaOptionsType = {
   dragFree: true,

@@ -57,14 +57,14 @@ const CardSection = ({
                   className={`${
                     title == "Essential e-Books for Every Trader"
                       ? "w-auto h-[250px]"
-                      : "w-full h-[295px] object-cover"
+                      : "w-full h-full object-cover"
                   }`}
                 />
               </div>
               <h5 className="text-[20px] md:text-[30px] font-riosark font-[400] leading-[110%] uppercase">
                 {item.title}
               </h5>
-              <p className="text-[16px] md:text-[20px]">{item.description}</p>
+              <p>{item.description}</p>
               <Button variant="common" className="login-button w-fit px-6 !h-9">
                 {item.action}
               </Button>

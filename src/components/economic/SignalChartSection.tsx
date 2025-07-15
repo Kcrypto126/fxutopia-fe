@@ -160,7 +160,7 @@ const SignalChartSection = () => {
               tickLine={false}
               axisLine={false}
               tickMargin={10}
-              tickFormatter={(value: any, _index: number): string => {
+              tickFormatter={(value: string): string => {
                 const date = new Date(value);
                 // Only show year label for January
                 if (date.getMonth() === 0) {
