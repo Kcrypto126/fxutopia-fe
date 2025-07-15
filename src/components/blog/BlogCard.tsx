@@ -40,9 +40,7 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
                 className="w-full h-[295px] object-cover"
               />
             </div>
-            <h5 className="text-[20px] md:text-[30px] font-riosark font-[400] leading-[110%] uppercase">
-              {item.title}
-            </h5>
+            
             <p className="text-[16px] md:text-[20px]">{item.description}</p>
             <Link href="/blogs/blog">
               <Button variant="common" className="login-button w-fit px-6 !h-9">
