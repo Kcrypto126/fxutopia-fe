@@ -12,7 +12,6 @@ import {
 } from "../ui/icon";
 
 type PropType = {
-  slides: Number[];
   options?: EmblaOptionsType;
 };
 

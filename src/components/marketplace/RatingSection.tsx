@@ -9,8 +9,6 @@ import RatingCarousel from "./RatingCarousel";
 import "./css/embla-rating.css";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 4;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const RatingSection = () => {
   return (
@@ -27,7 +25,7 @@ const RatingSection = () => {
           <h1 className="max-w-[655px]">Ratings & Reviews That Matter</h1>
         </div>
         <div className="w-full flex flex-col gap-4 lg:gap-6">
-          <RatingCarousel slides={SLIDES} options={OPTIONS} />
+          <RatingCarousel options={OPTIONS} />
         </div>
       </div>
     </Container>

@@ -1,5 +1,3 @@
-import { Avatar } from "@radix-ui/react-avatar";
-
 export const Resources = [
   {
     featured_image: "/assets/marketplace/resourse-1.png",
