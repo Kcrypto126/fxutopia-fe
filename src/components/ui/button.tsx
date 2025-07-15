@@ -29,6 +29,7 @@ const buttonVariants = cva(
           "flex items-center gap-4 rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] !px-0 !py-0 lg:!px-7 !w-11 !h-11 lg:!w-auto lg:!h-[52px]",
         back: "flex gap-0 items-center rounded-full bg-[#512F7C66] hover:bg-[#6B459C60] border-[1px] border-[#9862DB] !p-0 !w-9 lg:!w-[94px] !h-9 lg:!h-[54px]",
         hover: "hover:shadow-[0_0_15px_#ffffff90]",
+        select: "text-[16px] !text-[#fff] font-[500] !h-11 md:!h-[52px] rounded-full bg-[#512F7C66] hover:bg-[#6B459C60]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

@@ -388,11 +388,7 @@ const MainSection = () => {
           <div className="flex gap-4 lg:gap-6 items-center">
             <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
-                <Button
-                  variant="default"
-                  id="date"
-                  className="text-[16px] !text-[#fff] font-[500] !w-[150px] md:!w-[160px] !h-11 md:!h-[52px] rounded-full bg-[#512F7C66] hover:bg-[#6B459C60]"
-                >
+                <Button variant="select" id="date" className="!w-[150px] md:!w-[160px]">
                   {date ? date.toLocaleDateString() : "Select date"}
                   <ChevronDownIcon />
                 </Button>

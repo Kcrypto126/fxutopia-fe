@@ -45,7 +45,7 @@ const HeroSection = ({ data }: { data: HeroProps }) => {
         <h5 className="text-[30px] md:text-[40px] lg:text-[80px] uppercase font-riosark font-[400] text-center leading-[110%] md:leading-[105%] bg-gradient-to-r from-[#4E4EE41A] via-[#ffffff] to-[#4E4EE41A] bg-clip-text text-transparent">
           {data.title}
         </h5>
-        <p className="text-center max-w-[1224px]">{data.description}</p>
+        <p className="text-center max-w-[1124px]">{data.description}</p>
       </div>
     </div>
   );
