@@ -1,6 +1,11 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  IconBrandLinkedinFilled,
+  IconBrandTwitterFilled,
+  IconWorld,
+} from "@tabler/icons-react";
 
 export interface UserProps {
   avatar: string;
@@ -15,7 +20,7 @@ export interface UserProps {
 const Seller = ({ data }: { data: UserProps }) => {
   return (
     <div className="relative z-1 w-full h-full flex flex-col py-6 px-4 rounded-[8px] bg-[#381E5B99] border-[1px] border-[#9862DB]">
-      <div className="flex flex-col justify-between items-center gap-2">
+      <div className="flex flex-col justify-between h-full items-center gap-2">
         <Avatar className="h-20 w-20 rounded-full">
           <AvatarImage src={data.avatar} alt={data.full_name} />
           <AvatarFallback>CN</AvatarFallback>
@@ -24,10 +29,14 @@ const Seller = ({ data }: { data: UserProps }) => {
         <p className="!text-[16px] !font-[500] text-[#9862DB] !text-center">
           {data.title}
         </p>
-        <p className="!text-[16px] !font-[400] !text-center">
+        <p className="!text-[16px] !font-[400] !text-center !max-w-[278px]">
           {data.description}
         </p>
-        <div className="flex justify-center items-center gap-4">sdf</div>
+        <div className="flex justify-center items-center gap-4">
+          <IconBrandTwitterFilled width={20} height={20} color="#9862DB" />
+          <IconBrandLinkedinFilled width={20} height={20} color="#9862DB" />
+          <IconWorld width={20} height={20} color="#9862DB" />
+        </div>
       </div>
     </div>
   );

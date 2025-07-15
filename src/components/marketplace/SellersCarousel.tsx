@@ -20,12 +20,12 @@ const SellersCarousel: React.FC<PropType> = (props) => {
   ]);
 
   return (
-    <div className="embla_trader">
-      <div className="embla__viewport_trader" ref={emblaRef}>
-        <div className="embla__container_trader">
+    <div className="embla_seller">
+      <div className="embla__viewport_seller" ref={emblaRef}>
+        <div className="embla__container_seller">
           {slides.map((item, index) => (
-            <div className="embla__slide_trader" key={index}>
-              <div className="embla__slide__number_trader">
+            <div className="embla__slide_seller" key={index}>
+              <div className="embla__slide__number_seller">
                 <Seller data={item} />
               </div>
             </div>

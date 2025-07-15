@@ -1707,9 +1707,9 @@ export const VerifyIcon = () => {
       <path
         d="M13.142 8.48299L8.875 12.75L7.42049 11.2955M10 1.5C5.02944 1.5 1 5.52944 1 10.5C1 15.4706 5.02944 19.5 10 19.5C14.9706 19.5 19 15.4706 19 10.5C19 5.52944 14.9706 1.5 10 1.5Z"
         stroke="#9441FE"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

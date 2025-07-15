@@ -145,10 +145,41 @@ export const Resources = [
 
 export const SLIDES = [
   {
-    avatar: "",
-    full_name: "",
-    title: "",
-    description: "",
+    avatar: "/assets/marketplace/seo-1.png",
+    full_name: "Olivia Rhye",
+    title: "Founder & CEO",
+    description:
+      "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    twitter: "",
+    linkedin: "",
+    website: "",
+  },
+  {
+    avatar: "/assets/marketplace/seo-2.png",
+    full_name: "Olivia Rhye",
+    title: "Founder & CEO",
+    description:
+      "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    twitter: "",
+    linkedin: "",
+    website: "",
+  },
+  {
+    avatar: "/assets/marketplace/seo-3.png",
+    full_name: "Olivia Rhye",
+    title: "Founder & CEO",
+    description:
+      "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    twitter: "",
+    linkedin: "",
+    website: "",
+  },
+  {
+    avatar: "/assets/marketplace/seo-4.png",
+    full_name: "Olivia Rhye",
+    title: "Founder & CEO",
+    description:
+      "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
     twitter: "",
     linkedin: "",
     website: "",

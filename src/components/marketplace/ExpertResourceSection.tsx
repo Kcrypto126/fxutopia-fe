@@ -3,25 +3,23 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ReactStars from "react-stars";
 import Container from "../layouts/Container";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { IconSearch, IconLoader2 } from "@tabler/icons-react";
-import { ChevronDownIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 
 import { Resources } from "./data";
 import { VerifyIcon } from "../ui/icon";
+import RatingStars from "./Rating";
 
 const Categoris = ["Bots", "Platform", "Trading", "Video"];
 const Platforms = ["MT5", "MT4", "TradingView", "Trader"];
@@ -152,17 +150,11 @@ const ExpertResourceSection = () => {
                   {item.title}
                 </h5>
                 <p>{item.description}</p>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center flex-wrap gap-2">
                   <p className="px-5 py-[6px] bg-[#5B5696] rounded-full leading-[100%]">
                     {item.category}
                   </p>
-                  <ReactStars
-                    count={5}
-                    value={item.rating}
-                    edit={false}
-                    size={24}
-                    color2={"#FFD428"}
-                  />
+                  <RatingStars rating={item.rating} />
                   <h6>
                     {item.rating} ({item.reviews} Reviews)
                   </h6>
