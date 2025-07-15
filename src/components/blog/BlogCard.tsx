@@ -44,11 +44,7 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
               {item.title}
             </h5>
             <p className="text-[16px] md:text-[20px]">{item.description}</p>
-            <Link href="/blogs/blog">
-              <Button variant="common" className="login-button w-fit px-6 !h-9">
-                {item.action}
-              </Button>
-            </Link>
+            
           </div>
         ))}
       </div>
