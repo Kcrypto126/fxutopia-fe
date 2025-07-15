@@ -11,34 +11,22 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  IconChevronDown,
-  IconFilter2,
-  IconLoader2,
-  IconSearch,
-} from "@tabler/icons-react";
+import { IconFilter2, IconLoader2, IconSearch } from "@tabler/icons-react";
 import Container from "../layouts/Container";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import {
-  ArrowDownAccordianIcon,
-  ArrowUpAccordianIcon,
-  GraphsIcon,
-} from "../ui/icon";
+import { GraphsIcon } from "../ui/icon";
 
 const data = [
   [
@@ -308,27 +296,27 @@ const MainSection = () => {
   const [date, setDate] = React.useState<Date | undefined>(undefined);
   const [searchValue, setSearchValue] = React.useState("");
 
-  const [fromDate, setFromDate] = React.useState<Date | undefined>(
-    () => new Date()
-  );
-  const [toDate, setToDate] = React.useState<Date | undefined>(
-    () => new Date()
-  );
+  // const [fromDate, setFromDate] = React.useState<Date | undefined>(
+  //   () => new Date()
+  // );
+  // const [toDate, setToDate] = React.useState<Date | undefined>(
+  //   () => new Date()
+  // );
 
-  const isDateInRange = (dateStr: string) => {
-    const date = new Date(dateStr);
+  // const isDateInRange = (dateStr: string) => {
+  //   const date = new Date(dateStr);
 
-    if (!fromDate || !toDate) {
-      return false;
-    }
+  //   if (!fromDate || !toDate) {
+  //     return false;
+  //   }
 
-    return date >= fromDate && date <= toDate;
-  };
+  //   return date >= fromDate && date <= toDate;
+  // };
 
   // To get only the items with date from May 01 to May 03:
-  const filteredData = data
-    .map((dayArr) => dayArr.filter((item) => isDateInRange(item.date)))
-    .filter((dayArr) => dayArr.length > 0);
+  // const filteredData = data
+  //   .map((dayArr) => dayArr.filter((item) => isDateInRange(item.date)))
+  //   .filter((dayArr) => dayArr.length > 0);
 
   const convertDate = (date: Date | undefined) => {
     if (date) {
@@ -361,12 +349,37 @@ const MainSection = () => {
     // const date2 = new Date("Wed Jul 02 2025 00:00:00 GMT+0900 (Japan Standard Time)");
     // if (date1 > date2) { ... } // date1 is later than date2
 
-    setFromDate(date);
-    setToDate(date);
+    // setFromDate(date);
+    // setToDate(date);
 
     setDate(date);
     setOpen(false);
   };
+
+  const [dataCounts, setDataCounts] = React.useState(
+    data.map((dayData) => Math.min(2, dayData.length))
+  );
+  const [isLoading, setIsLoading] = React.useState(data.map(() => false));
+
+  const [localGraphOpenStates, setLocalGraphOpenStates] = React.useState(
+    data.map((dayData) => Array(dayData.length).fill(false))
+  );
+
+  React.useEffect(() => {
+    setLocalGraphOpenStates(
+      data.map((dayData, i) =>
+        localGraphOpenStates[i]
+          ? [
+              ...localGraphOpenStates[i],
+              ...Array(dayData.length - localGraphOpenStates[i].length).fill(
+                false
+              ),
+            ].slice(0, dayData.length)
+          : Array(dayData.length).fill(false)
+      )
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
 
   return (
     <Container className="pt-8 md:pt-20 pr-0 xl:pr-3">
@@ -441,10 +454,6 @@ const MainSection = () => {
           </div>
           <div className="flex flex-col gap-6 md:gap-12 min-w-[1400px]">
             {data.map((dayData, dayIndex) => {
-              const [dataCount, setDataCount] = React.useState(
-                Math.min(2, dayData.length)
-              );
-              const [isLoading, setIsLoading] = React.useState(false);
               return (
                 <div
                   key={dayIndex}
@@ -452,30 +461,35 @@ const MainSection = () => {
                 >
                   {(() => {
                     // Manage local graph open state for each row in this day
-                    const [localGraphOpenStates, setLocalGraphOpenStates] =
-                      React.useState(() => Array(dayData.length).fill(false));
+                    // const [localGraphOpenStates, setLocalGraphOpenStates] =
+                    //   React.useState(() => Array(dayData.length).fill(false));
 
                     // When dataCount increases, ensure localGraphOpenStates is long enough
-                    React.useEffect(() => {
-                      if (localGraphOpenStates.length < dayData.length) {
-                        setLocalGraphOpenStates((prev) => [
-                          ...prev,
-                          ...Array(dayData.length - prev.length).fill(false),
-                        ]);
-                      }
-                    }, [dayData.length, localGraphOpenStates.length]);
+                    // React.useEffect(() => {
+                    //   if (localGraphOpenStates.length < dayData.length) {
+                    //     setLocalGraphOpenStates((prev) => [
+                    //       ...prev,
+                    //       ...Array(dayData.length - prev.length).fill(false),
+                    //     ]);
+                    //   }
+                    // }, [dayData.length, localGraphOpenStates.length]);
 
                     return (
                       <div className="flex flex-col gap-4 md:gap-8">
                         {dayData
-                          .slice(0, dataCount)
+                          .slice(0, dataCounts[dayIndex])
                           .map((timeData, timeIndex) => {
                             const isLocalGraphOpen =
-                              localGraphOpenStates[timeIndex];
+                              localGraphOpenStates[dayIndex][timeIndex];
                             const handleToggleGraph = () => {
                               setLocalGraphOpenStates((prev) => {
-                                const newArr = [...prev];
-                                newArr[timeIndex] = !newArr[timeIndex];
+                                const newArr = prev.map((arr, i) =>
+                                  i === dayIndex
+                                    ? arr.map((val, j) =>
+                                        j === timeIndex ? !val : val
+                                      )
+                                    : arr
+                                );
                                 return newArr;
                               });
                             };
@@ -521,7 +535,7 @@ const MainSection = () => {
                                         <Button
                                           variant="default"
                                           className="!p-0 !w-[34px] !h-[34px] !bg-transparent"
-                                          // onClick={handleToggleGraph}
+                                          onClick={handleToggleGraph}
                                         >
                                           <GraphsIcon width="44" height="44" />
                                         </Button>
@@ -560,8 +574,9 @@ const MainSection = () => {
                                               Usual Effect
                                             </p>
                                             <p>
-                                              Actual' greater than 'Forecast' is
-                                              good for currency;
+                                              Actual&apos; greater than
+                                              &apos;Forecast&apos; is good for
+                                              currency;
                                             </p>
                                           </div>
                                           <div className="flex gap-15">
@@ -594,7 +609,7 @@ const MainSection = () => {
                                               Why Traders Care
                                             </p>
                                             <p>
-                                              It's a leading indicator of
+                                              It&apos;s a leading indicator of
                                               economic health - businesses are
                                               quickly affected by market
                                               conditions, and changes in their
@@ -684,16 +699,29 @@ const MainSection = () => {
                         <h6
                           className="w-[140px] h-4 flex justify-center text-[16px] text-[#9441FE] mt-4 md:mt-8 cursor-pointer"
                           onClick={() => {
-                            setIsLoading(true);
+                            setIsLoading((prev) => {
+                              const newArr = [...prev];
+                              newArr[dayIndex] = true;
+                              return newArr;
+                            });
                             setTimeout(() => {
-                              setDataCount((prevCount) =>
-                                Math.min(prevCount + 2, dayData.length)
-                              );
-                              setIsLoading(false);
+                              setDataCounts((prevCounts) => {
+                                const newCounts = [...prevCounts];
+                                newCounts[dayIndex] = Math.min(
+                                  newCounts[dayIndex] + 2,
+                                  dayData.length
+                                );
+                                return newCounts;
+                              });
+                              setIsLoading((prev) => {
+                                const newArr = [...prev];
+                                newArr[dayIndex] = false;
+                                return newArr;
+                              });
                             }, 200);
                           }}
                         >
-                          {isLoading ? (
+                          {isLoading[dayIndex] ? (
                             <IconLoader2 className="w-4 h-4 animate-spin" />
                           ) : (
                             "Show More Impact"
