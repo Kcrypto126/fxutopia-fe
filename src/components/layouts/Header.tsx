@@ -39,6 +39,10 @@ const mainMenu: { title: string; link: string }[] = [
     link: "/education",
   },
   {
+    title: "Economic",
+    link: "/economic",
+  },
+  {
     title: "Community",
     link: "/community",
   },

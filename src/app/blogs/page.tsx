@@ -1,6 +1,6 @@
 "use client";
 
-import HeroSection from "@/components/marketplace/HeroSection";
+import HeroSection from "@/components/education/HeroSection";
 import BlogSection from "@/components/blog/BlogSection";
 
 import { Blogs as BlogData } from "@/components/blog/data";

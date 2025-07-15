@@ -1,8 +1,8 @@
 "use client";
 
-import HeroSection from "@/components/marketplace/HeroSection";
-import TutorialSection from "@/components/marketplace/TutorialSection";
-import CardSection from "@/components/marketplace/CardSection";
+import HeroSection from "@/components/education/HeroSection";
+import TutorialSection from "@/components/education/TutorialSection";
+import CardSection from "@/components/education/CardSection";
 
 const HeroData = {
   title: "Unlock your potential with expert-led education and resources",
@@ -10,7 +10,7 @@ const HeroData = {
     "Explore fresh perspectives, timely insights, and actionable trading content — created by traders, for traders.",
 };
 
-import { Courses, Ebooks, Marketplaces } from "@/app/marketplace/data";
+import { Courses, Ebooks, Educations } from "@/app/education/data";
 const titles = [
   "See Our Latest Courses",
   "Essential e-Books for Every Trader",
@@ -23,7 +23,7 @@ const descriptions = [
   "We've handpicked a collection of trading tools, indicators, and mentorships from verified providers. Whether you're automating your trades or searching for premium signals, the FX Utopia Marketplace makes it easy to find what works.",
 ];
 
-const Marketplace = () => {
+const Education = () => {
   return (
     <div className="pb-8 md:pb-22">
       <HeroSection data={HeroData} />
@@ -39,7 +39,7 @@ const Marketplace = () => {
         description={descriptions[1]}
       />
       <CardSection
-        data={Marketplaces}
+        data={Educations}
         title={titles[2]}
         description={descriptions[2]}
       />
@@ -47,4 +47,4 @@ const Marketplace = () => {
   );
 };
 
-export default Marketplace;
+export default Education;
