@@ -1,7 +1,7 @@
 "use client";
 
 import ContactUsSection from "@/components/contact-us/ContactUsSection";
-import HeroSection from "@/components/marketplace/HeroSection";
+import HeroSection from "@/components/education/HeroSection";
 
 const HeroData = {
   title: "Get in Touch with FX Utopia",

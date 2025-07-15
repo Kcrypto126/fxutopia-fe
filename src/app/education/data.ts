@@ -102,7 +102,7 @@ export const Ebooks = [
   },
 ];
 
-export const Marketplaces = [
+export const Educations = [
   {
     featured_image: "/assets/marketplace/marketplace-1.png",
     title: "Premium Signal Groups",

@@ -349,3 +349,13 @@ svg.social-icon:hover circle {
     -webkit-line-clamp: 2;
   }
 }
+
+.calendar {
+  overflow-x: visible;
+}
+
+@media only screen and (max-width: 1440px) {
+  .calendar {
+    overflow-x: auto;
+  }
+}

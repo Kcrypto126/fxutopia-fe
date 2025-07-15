@@ -1614,3 +1614,83 @@ export const SignalIcon = () => {
     </svg>
   );
 };
+
+export const GraphsIcon = ({ width, height }: IconProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 35 34"
+      fill="none"
+      className="!w-[32px] !h-[32px]"
+    >
+      <path
+        d="M24.2984 23.7999V15.2999M17.4984 23.7999V10.1999M10.6984 23.7999V20.3999M7.29843 30.5999C5.42067 30.5999 3.89844 29.0777 3.89844 27.1999V6.7999C3.89844 4.92213 5.42067 3.3999 7.29844 3.3999H27.6984C29.5762 3.3999 31.0984 4.92213 31.0984 6.7999V27.1999C31.0984 29.0777 29.5762 30.5999 27.6984 30.5999H7.29843Z"
+        stroke="#8A50D6"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ArrowDownAccordianIcon = ({ width, height }: IconProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 25 26"
+      fill="none"
+      className="!w-[25px] !h-[25px]"
+    >
+      <rect
+        y="25.6699"
+        width="25.3425"
+        height="25"
+        rx="12.5"
+        transform="rotate(-90 0 25.6699)"
+        fill="#9441FE"
+      />
+      <path
+        d="M9.87891 14.3096L12.5005 11.688L15.1222 14.3096"
+        stroke="white"
+        strokeWidth="0.873878"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ArrowUpAccordianIcon = ({ width, height }: IconProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 25 26"
+      fill="none"
+      className="!w-[25px] !h-[25px]"
+    >
+      <rect
+        x="25"
+        y="0.328125"
+        width="25.3425"
+        height="25"
+        rx="12.5"
+        transform="rotate(90 25 0.328125)"
+        fill="#9441FE"
+      />
+      <path
+        d="M15.1211 11.6884L12.4995 14.3101L9.87783 11.6884"
+        stroke="white"
+        strokeWidth="0.873878"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
