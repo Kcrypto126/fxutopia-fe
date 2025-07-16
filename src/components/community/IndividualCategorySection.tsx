@@ -37,7 +37,7 @@ const IndividualCategorySection = () => {
           <Link href="/community">
             <Button variant="back" className="!pr-0.5">
               <IconChevronLeft className="!w-[20px] !h-[20px]" />
-              <p className="hidden lg:block !text-[16px]">Back</p>
+              <p className="hidden lg:block">Back</p>
             </Button>
           </Link>
           <h5 className="text-[18px] md:text-[32px] font-[500]">
