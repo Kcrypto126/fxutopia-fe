@@ -19,7 +19,7 @@ const Blog = () => {
           <Link href="/blogs#more-blog">
             <Button variant="back" className="!pr-0.5">
               <IconChevronLeft className="!w-[20px] !h-[20px]" />
-              <p className="hidden lg:block !text-[16px]">Back</p>
+              <p className="hidden lg:block">Back</p>
             </Button>
           </Link>
           <div className="flex flex-col gap-8 lg:gap-10">
