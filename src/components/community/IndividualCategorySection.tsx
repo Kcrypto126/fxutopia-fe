@@ -63,7 +63,10 @@ const IndividualCategorySection = () => {
             <IconEyeFilled width="24" height="24" />
             <h5 className="text-[20px]">Views</h5>
           </div>
-          
+          <div className="flex gap-2 items-center w-[109px]">
+            <IconClockFilled width="24" height="24" />
+            <h5 className="text-[20px]">Activity</h5>
+          </div>
         </div>
       </div>
 
