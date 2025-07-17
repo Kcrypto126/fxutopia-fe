@@ -23,7 +23,7 @@ const FilterSection = () => {
             color="#9862DB"
             className="!w-5 !h-5 lg:!w-7 lg:!h-7"
           />
-          <h5 className="text-[16px] font-[500] hidden lg:block">Filter</h5>
+          <h5 className="hidden lg:block">Filter</h5>
         </Button>
         <Button variant="filter">
           <IconFlameFilled

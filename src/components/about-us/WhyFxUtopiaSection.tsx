@@ -52,20 +52,21 @@ const WhyFxUtopiaSection = () => {
             width={1102}
             height={188}
             alt="about-us"
-            className="lg:-mb-15"
+            className="opacity-40"
           />
           <h1 className="max-w-[751px] !text-center">
             Designed with Real Traders in Mind
           </h1>
           <p className="max-w-[826px] !text-center mt-3 md:mt-6">
             At FX Utopia, our team is made up of experienced Forex and Crypto
-            traders, educators, developers, and market analysts. We&apos;ve lived the
-            journey — from beginner confusion to breakthrough moments.
+            traders, educators, developers, and market analysts. We&apos;ve
+            lived the journey — from beginner confusion to breakthrough moments.
             <br />
-            <br /> That&apos;s why our platform is built with real-world experience,
-            not theory. Every tool, course, and community feature is created to
-            solve problems we&apos;ve faced ourselves. We don&apos;t just talk about
-            trading — we&apos;ve been in the markets, and we know what truly helps.
+            <br /> That&apos;s why our platform is built with real-world
+            experience, not theory. Every tool, course, and community feature is
+            created to solve problems we&apos;ve faced ourselves. We don&apos;t
+            just talk about trading — we&apos;ve been in the markets, and we
+            know what truly helps.
           </p>
           <Image
             src="/assets/about-us/snipet-1.png"

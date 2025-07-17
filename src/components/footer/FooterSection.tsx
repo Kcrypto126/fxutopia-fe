@@ -45,6 +45,10 @@ const FooterSection = () => {
     }, 1000);
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Container className="relative z-0 py-8 md:py-12">
       <Image
@@ -134,7 +138,7 @@ const FooterSection = () => {
           <div
             className="hidden lg:flex items-center gap-6 cursor-pointer"
             onClick={() => {
-              router.push("/#home");
+              scrollToTop();
             }}
           >
             <div className="bg-[#9441FE] p-4 rounded-full">
