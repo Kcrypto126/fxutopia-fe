@@ -16,7 +16,13 @@ const FilterSection = () => {
   return (
     <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 lg:gap-6 justify-between items-center py-4 lg:py-0 w-full">
       <div className="flex flex-wrap sm:flex-nowrap gap-4 lg:gap-6 justify-center items-center">
-        
+        <Button variant="filter">
+          <IconFilter2
+            width="32"
+            height="32"
+            color="#9862DB"
+            className="!w-5 !h-5 lg:!w-7 lg:!h-7"
+          />
           <h5 className="text-[16px] font-[500] hidden lg:block">Filter</h5>
         </Button>
         <Button variant="filter">
