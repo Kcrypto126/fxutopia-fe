@@ -208,8 +208,7 @@ const CategorySection = () => {
     <div className="w-full h-fit p-0 lg:p-6 rounded-[28px] bg-transparent lg:bg-[#381E5B60] max-w-full lg:max-w-[320px]">
       <div className="w-full hidden lg:block">
         <div className=" w-full flex items-center justify-between gap-2 py-3">
-          <h5 className="text-[20px] font-bold">Categories</h5>
-          <ChevronDown />
+          
         </div>
         <ul className="flex flex-col gap-7 mt-8">
           {Categories.map((item) => (
