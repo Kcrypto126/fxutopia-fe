@@ -50,7 +50,10 @@ const IndividualCategorySection = () => {
       </div>
 
       <div className="hidden md:flex lg:hidden xl:flex gap-2 justify-between items-center py-5 px-7 bg-[#EFEFEF1A] rounded-full">
-        
+        <div className="flex items-center gap-3">
+          <span className="w-4 h-4 bg-[#87E1FF] rounded-full"></span>
+          <h5 className="text-[20px]">Topics</h5>
+        </div>
         <div className="flex gap-6 items-center">
           <div className="flex gap-2 items-center w-[109px]">
             <IconBubbleTextFilled width="24" height="24" />
