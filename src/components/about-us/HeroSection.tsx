@@ -6,8 +6,8 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full flex items-end overflow-hidden" id="home">
-      <div className="absolute top-0 left-0 w-full h-full select-none">
+    <div className="relative overflow-hidden px-3">
+      <div className="absolute top-0 left-0 w-full h-full">
         <Image
           src="/assets/home/hero-left.png"
           width={259}
@@ -38,15 +38,15 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="max-w-[1440px] mx-auto w-full min-h-fit md:min-h-[888px] px-3 py-30 relative z-30 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-8">
+      <div className="max-w-[1440px] mx-auto w-full min-h-fit md:min-h-[888px] py-30 relative z-30 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
           <h5 className="text-[30px] md:text-[40px] xl:text-[70px] !text-center lg:!text-start uppercase font-riosark font-[400] leading-[100%] bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#4E4EE41A] bg-clip-text text-transparent">
             Where Traders Learn, Grow & Thrive Together
           </h5>
           <p className="!text-center lg:!text-start max-w-[744px]">
-            At FX Utopia, we&apos;re building more than just a platform — we&apos;re
-            creating a home for Forex and Crypto enthusiasts who value real
-            education, powerful tools, and a strong community.
+            At FX Utopia, we&apos;re building more than just a platform —
+            we&apos;re creating a home for Forex and Crypto enthusiasts who
+            value real education, powerful tools, and a strong community.
           </p>
           <Link href="/" className="mt-4 lg:mt-8">
             <Button variant="common" className="login-button !w-[247px]">

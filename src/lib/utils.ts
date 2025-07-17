@@ -10,13 +10,13 @@ export const formatLargeNumber = (num: number): string => {
   const absNum = Math.abs(num);
 
   if (absNum >= 1e9) {
-    return num / 1e9 + "B";
+    return (num / 1e9).toFixed(2) + "B";
   }
   if (absNum >= 1e6) {
-    return num / 1e6 + "M";
+    return (num / 1e6).toFixed(2) + "M";
   }
   if (absNum >= 1e3) {
-    return num / 1e3 + "K";
+    return (num / 1e3).toFixed(2) + "K";
   }
 
   return num.toString();
