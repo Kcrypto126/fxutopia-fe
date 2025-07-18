@@ -47,8 +47,20 @@ const mainMenu: { title: string; link: string }[] = [
     link: "/community",
   },
   {
+    title: "Reviews",
+    link: "/broker-review",
+  },
+  {
     title: "Blog",
     link: "/blogs",
+  },
+  {
+    title: "Login",
+    link: "/signin",
+  },
+  {
+    title: "Sign Up",
+    link: "/signup",
   },
 ];
 
@@ -77,9 +89,9 @@ const Header = () => {
             className="max-w-[170px] lg:max-w-[200px] w-full"
           />
         </Link>
-        <NavigationMenu viewport={false} className="hidden lg:block">
+        <NavigationMenu viewport={false} className="hidden xl:block">
           <NavigationMenuList>
-            {mainMenu.map((item) => (
+            {mainMenu.slice(0, mainMenu.length - 2).map((item) => (
               <NavigationMenuItem key={item.title}>
                 <NavigationMenuLink href={item.link}>
                   {item.title}
@@ -89,7 +101,7 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="block lg:hidden">
+        <div className="block xl:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button
@@ -127,7 +139,7 @@ const Header = () => {
           </Sheet>
         </div>
 
-        <div className="hidden lg:flex gap-3 justify-end items-center py-1">
+        <div className="hidden xl:flex gap-3 justify-end items-center py-1">
           <Link href="/account/signin">
             <Button
               variant="login"
