@@ -3,7 +3,7 @@
 import HeroSection from "@/components/education/HeroSection";
 import BlogSection from "@/components/blog/BlogSection";
 
-import { Blogs as BlogData } from "@/components/blog/data";
+import { BLOGS } from "./data";
 
 const HeroData = {
   title: "FX Utopia Blogs: Trade Smarter, Think Deeper",
@@ -15,7 +15,7 @@ const Blogs = () => {
   return (
     <>
       <HeroSection data={HeroData} />
-      <BlogSection data={BlogData} />
+      <BlogSection data={BLOGS} />
     </>
   );
 };

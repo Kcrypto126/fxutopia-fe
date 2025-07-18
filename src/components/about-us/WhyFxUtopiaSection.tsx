@@ -7,11 +7,11 @@ import { EmblaOptionsType } from "embla-carousel";
 
 import "./css/embla.css";
 
-const OPTIONS: EmblaOptionsType = {};
+const OPTIONS: EmblaOptionsType = { loop: true };
 
 const WhyFxUtopiaSection = () => {
   return (
-    <div className="relative w-full py-8 md:py-30 flex flex-col gap-8 lg:gap-36 px-3">
+    <div className="relative w-full py-8 md:py-30 space-y-8 lg:space-y-36 px-3">
       <Image
         src="/assets/about-us/whyutopia.png"
         width={1600}
@@ -19,9 +19,9 @@ const WhyFxUtopiaSection = () => {
         alt="snipet"
         className="absolute top-[50%] -translate-y-[60%] left-[50%] -translate-x-[50%] -z-10"
       />
-      <div className="relative w-full flex flex-col gap-8 lg:gap-20">
+      <div className="relative w-full space-y-8 lg:space-y-20">
         <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-between gap-2">
-          <h1 className="!text-center lg:!text-start">Why FX Utopia?</h1>
+          <h1 className="lg:!text-start">Why FX Utopia?</h1>
           <p className="max-w-full lg:max-w-[560px] !text-center lg:!text-start">
             Unlock your trading potential with a platform designed for learning,
             growth, and real results. Whether you&apos;re just starting out or
@@ -54,10 +54,10 @@ const WhyFxUtopiaSection = () => {
             alt="about-us"
             className="opacity-40"
           />
-          <h1 className="max-w-[751px] !text-center">
+          <h1 className="max-w-[751px] !leading-[100%]">
             Designed with Real Traders in Mind
           </h1>
-          <p className="max-w-[826px] !text-center mt-3 md:mt-6">
+          <p className="max-w-[826px] text-center mt-3 md:mt-6">
             At FX Utopia, our team is made up of experienced Forex and Crypto
             traders, educators, developers, and market analysts. We&apos;ve
             lived the journey — from beginner confusion to breakthrough moments.

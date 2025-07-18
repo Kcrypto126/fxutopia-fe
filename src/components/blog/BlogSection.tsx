@@ -9,12 +9,7 @@ import { useState } from "react";
 import { IconSearch } from "@tabler/icons-react";
 import BlogCards from "./BlogCard";
 
-interface BlogProps {
-  featured_image: string;
-  title: string;
-  description: string;
-  action: string;
-}
+import { BlogProps } from "@/app/blogs/data";
 
 const BlogSection = ({ data }: { data: BlogProps[] }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -31,21 +26,21 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
 
   return (
     <Container className="py-8 md:pt-30 md:pb-14">
-      <div className="flex flex-col gap-15 md:gap-25">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20">
+      <div className="space-y-15 md:space-y-25">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-20">
           <Image
             src="/assets/blog/blog-0.jpg"
             width={748}
-            height={585}
+            height={685}
             alt="blog"
-            className="rounded-[30px] w-full h-full object-cover"
+            className="rounded-[30px] w-full h-auto"
           />
           <div className="flex flex-col gap-4">
-            <h5 className="text-[20px] md:text-[46px] font-riosark uppercase leading-[110%]">
+            <h1 className="!text-[20px] md:!text-[40px] !text-start !leading-[110%]">
               How AI is Revolutionizing Prop Trading: Strategies for Success
-            </h5>
+            </h1>
             <h5 className="text-[16px] md:text-[20px]">January 29th, 2025</h5>
-            <p className="!text-[16px] md:!text-[20px]">
+            <p>
               The world is changing at a rate never seen before due to
               artificial intelligence, and the proprietary trading industry is
               not exempt from this rapidly developing technology. By enabling
@@ -62,9 +57,9 @@ const BlogSection = ({ data }: { data: BlogProps[] }) => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-8 lg:gap-20" id="more-blog">
+        <div className="space-y-8 lg:spce-y-20" id="more-blog">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <h1 className="!text-center md:!text-start">Our Recent Blogs</h1>
+            <h1 className="md:!text-start">Our Recent Blogs</h1>
             <div className="relative flex items-center max-w-[90vw] sm:max-w-[471px] w-full">
               <IconSearch
                 width="20"
