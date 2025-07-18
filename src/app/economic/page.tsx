@@ -13,12 +13,12 @@ const data = {
 
 const EconomicCalendar = () => {
   return (
-    <div>
+    <>
       <HeroSection data={data} />
       <MainSection />
       <CalculatorSection />
       <SignalChartSection />
-    </div>
+    </>
   );
 };
 
