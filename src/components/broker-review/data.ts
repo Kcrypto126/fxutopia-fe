@@ -15,7 +15,7 @@ export interface ReviewProps {
   date: string;
 }
 
-export const data = [
+export const REVIEWS = [
   {
     title: "MetaTrader Solutions",
     website: "metatradersolutions.com",

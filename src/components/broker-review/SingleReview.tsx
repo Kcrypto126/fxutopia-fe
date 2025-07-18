@@ -13,15 +13,16 @@ import {
   IconClockFilled,
   IconMessageDots,
 } from "@tabler/icons-react";
+
 import { ReviewProps } from "./data";
 
 const SingleReview = ({ data }: { data: ReviewProps }) => {
   return (
-    <div className="flex flex-col gap-6 md:gap-10 w-full p-4 md:p-10 rounded-[24px] bg-gradient-to-b from-[#2B0A47] to-[#09030E] border-[1px] border-[#361056]">
+    <div className="space-y-6 md:space-y-10 w-full p-4 md:p-10 rounded-[24px] bg-gradient-to-b from-[#2B0A47] to-[#09030E] border-[1px] border-[#361056]">
       <div className="flex flex-wrap justify-between items-center gap-2">
         <div className="flex gap-2 md:gap-4">
           <IconTrendingUp className="w-8 md:w-15 h-8 md:h-15 bg-[#8A50D6] p-1 md:p-3 rounded-[6px]" />
-          <div className="flex flex-col">
+          <div>
             <Link
               href="/broker-review/single"
               className="!text-[18px] md:!text-[36px] leading-[105%] hover:opacity-70 transition-all duration-300"
