@@ -313,3 +313,78 @@ export const data = [
     },
   },
 ];
+
+export const LatestReviews = [
+  {
+    user: {
+      avatar: "/assets/home/review-avatar1.jpg",
+      username: "JamesTrades",
+      rating: 5,
+    },
+    review:
+      "Been using them for over 3 months now. Their entries are consistent and exits are clearly communicated. Helps me stay disciplined in volatile markets",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar2.jpg",
+      username: "ScalpQueen",
+      rating: 4.5,
+    },
+    review:
+      "Reliable scalping signals during NY open. Super fast updates. As a short-term trader, timing is everything. These signals drop with precision right when the market moves. Great performance week over week.",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar3.jpg",
+      username: "InvestorMax",
+      rating: 4.8,
+    },
+    review:
+      "Support team is active. Weekly recaps are gold! I'm still learning, so their weekly review videos help me understand what happened and why. Makes me feel more in control of my trades.",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar4.jpg",
+      username: "RickTheBull",
+      rating: 5,
+    },
+    review:
+      "Swing trades are on point — strong R/R ratios every time. Takes the guesswork out. Even if I miss an entry, their alerts include backup zones and exit plans. Extremely useful.",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar5.jpg",
+      username: "JamesTrades",
+      rating: 5,
+    },
+    review:
+      "Been using them for over 3 months now. Their entries are consistent and exits are clearly communicated. Helps me stay disciplined in volatile markets",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar6.jpg",
+      username: "ScalpQueen",
+      rating: 4.5,
+    },
+    review:
+      "Reliable scalping signals during NY open. Super fast updates. As a short-term trader, timing is everything. These signals drop with precision right when the market moves. Great performance week over week.",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar7.jpg",
+      username: "InvestorMax",
+      rating: 4.8,
+    },
+    review:
+      "Support team is active. Weekly recaps are gold! I'm still learning, so their weekly review videos help me understand what happened and why. Makes me feel more in control of my trades.",
+  },
+  {
+    user: {
+      avatar: "/assets/home/review-avatar3.jpg",
+      username: "RickTheBull",
+      rating: 5,
+    },
+    review:
+      "Swing trades are on point — strong R/R ratios every time. Takes the guesswork out. Even if I miss an entry, their alerts include backup zones and exit plans. Extremely useful.",
+  },
+];
