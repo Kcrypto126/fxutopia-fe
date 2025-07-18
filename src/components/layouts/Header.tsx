@@ -48,7 +48,7 @@ const mainMenu: { title: string; link: string }[] = [
   },
   {
     title: "Reviews",
-    link: "/broker-review",
+    link: "/broker-reviews",
   },
   {
     title: "Blog",

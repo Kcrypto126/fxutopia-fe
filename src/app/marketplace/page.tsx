@@ -6,7 +6,7 @@ import ExpertResourceSection from "@/components/marketplace/ExpertResourceSectio
 import RatingSection from "@/components/marketplace/RatingSection";
 import SellersSection from "@/components/marketplace/SellersSection";
 
-const data = {
+const HeroData = {
   title: "FX UTOPIA MARKETPLACE",
   description:
     "Whether you're looking to optimize your Forex performance, automate your crypto strategies, or access advanced indicators — our marketplace delivers verified, vetted, and value-packed products from experienced creators.",
@@ -15,7 +15,7 @@ const data = {
 const MarketPlace = () => {
   return (
     <div className="md:pb-20">
-      <HeroSection data={data} />
+      <HeroSection data={HeroData} />
       <ExpertResourceSection />
       <SellersSection />
       <RatingSection />

@@ -24,7 +24,7 @@ const SingleReview = ({ data }: { data: ReviewProps }) => {
           <IconTrendingUp className="w-8 md:w-15 h-8 md:h-15 bg-[#8A50D6] p-1 md:p-3 rounded-[6px]" />
           <div>
             <Link
-              href="/broker-review/single"
+              href="/broker-reviews/broker-review"
               className="!text-[18px] md:!text-[36px] leading-[105%] hover:opacity-70 transition-all duration-300"
             >
               {data.title}
