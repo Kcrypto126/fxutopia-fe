@@ -10,26 +10,26 @@ import {
 } from "@tabler/icons-react";
 import Container from "../layouts/Container";
 import { useState } from "react";
-
 import SingleReview from "./SingleReview";
-import { data } from "./data";
+
+import { REVIEWS } from "./data";
 
 const BrokerReviewSection = () => {
   const [searchValue, setSearchValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [reviewNumber, setReviewNumber] = useState(Math.min(5, data.length));
+  const [reviewNumber, setReviewNumber] = useState(Math.min(5, REVIEWS.length));
 
   const showMore = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      setReviewNumber(Math.min(reviewNumber + 5, data.length));
+      setReviewNumber(Math.min(reviewNumber + 5, REVIEWS.length));
     }, 200);
   };
 
   return (
     <Container className="py-8 md:py-20">
-      <div className="flex flex-col gap-8 md:gap-15">
+      <div className="space-y-8 md:space-y-15">
         <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-6 justify-between items-center w-full">
           <div className="flex flex-wrap sm:flex-nowrap gap-4 lg:gap-6 justify-center items-center">
             <Button variant="select" className="!px-4 md:!px-7">
@@ -68,7 +68,7 @@ const BrokerReviewSection = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-4 items-center">
-          <h1 className="!text-center lg:!text-start max-w-[735px]">
+          <h1 className="lg:!text-start max-w-[735px]">
             Broker & Product Reviews
           </h1>
           <p className="max-w-[513px] !text-center lg:!text-start">
@@ -77,8 +77,8 @@ const BrokerReviewSection = () => {
             and choose smarter with verified reviews from the trading community.
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:gap-11">
-          {data.slice(0, reviewNumber).map((item, index) => (
+        <div className="space-y-8 md:space-y-11">
+          {REVIEWS.slice(0, reviewNumber).map((item, index) => (
             <SingleReview key={index} data={item} />
           ))}
           <Button

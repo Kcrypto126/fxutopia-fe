@@ -65,9 +65,9 @@ const ContactUsSection = () => {
   }
 
   return (
-    <Container className="py-8 md:py-30 mb-5">
+    <Container className="py-8 md:py-30">
       <div className="flex flex-col lg:flex-row gap-8 md:gap-12">
-        <div className="w-full flex flex-col gap-6 lg:gap-13">
+        <div className="w-full space-y-6 lg:space-y-13">
           <div>
             <h1 className="!text-start">Need Help?</h1>
             <p>
