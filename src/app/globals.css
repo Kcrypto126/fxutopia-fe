@@ -212,7 +212,7 @@ img {
   background-color: #8a50d6;
 }
 .login-button:hover {
-  background-color: rgb(160, 104, 233) !important;
+  background-color: rgb(160, 104, 233);
 }
 
 .login-button::before {

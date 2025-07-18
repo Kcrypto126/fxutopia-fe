@@ -8,7 +8,7 @@ import JoinCommunitySection from "@/components/home/JoinCommunitySection";
 
 const AboutUs = () => {
   return (
-    <div className="pb-8 md:pb-35">
+    <div className="pt-16 lg:pt-28 lg:pb-28">
       <HeroSection />
       <AboutFxUtopiaSection />
       <WhatWeOfferSection />

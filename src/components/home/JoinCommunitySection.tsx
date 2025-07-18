@@ -7,12 +7,12 @@ import { Button } from "../ui/button";
 
 const JoinCommunitySection = ({ color }: { color: string }) => {
   return (
-    <Container className={`py-8 md:py-28 overflow-hidden bg-[${color}] `}>
-      <div className="flex flex-col gap-11">
+    <Container className={`py-8 md:py-20 overflow-hidden bg-[${color}] `}>
+      <div className="space-y-11">
         <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-8">
-          <h5 className="uppercase text-center md:text-start text-[30px] lg:text-[50px] xl:text-[72px] font-riosark font-[400] leading-[120%] max-w-[956px]">
+          <h1 className="md:!text-start xl:!text-[62px] max-w-[906px]">
             Join a Global Trading and Crypto Community
-          </h5>
+          </h1>
           <div className="flex flex-col justify-center items-center md:items-start gap-[20px]">
             <p className="text-center md:text-start">
               FX Utopia is more than a platform. It&apos;s a movement.

@@ -29,7 +29,6 @@ const FormSchema = z.object({
 
 const FooterSection = () => {
   const [isSubmiting, setIsSubmiting] = useState(false);
-  const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {

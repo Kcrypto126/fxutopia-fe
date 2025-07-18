@@ -18,7 +18,7 @@ const PageLayout = ({
         width={1840}
         height={800}
         alt="hero-top"
-        className="w-[300%] absolute top-0 left-[50%] -translate-x-[55%] -z-20 min-w-[1640px]"
+        className="w-[300%] min-w-[1640px] absolute top-0 left-[50%] -translate-x-[55%] -z-20"
       />
       <Image
         src="/assets/home/hero-left-top-light.png"

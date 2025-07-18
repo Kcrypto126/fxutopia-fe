@@ -17,7 +17,7 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
-const WhyFxs = [
+const WHYFXS = [
   {
     icon: <SignalIcon />,
     title: "Live Signals & Trade Ideas",
@@ -60,12 +60,12 @@ const TopTraderCarousel: React.FC<PropType> = (props) => {
     <div className="embla_why">
       <div className="embla__viewport_why" ref={emblaRef}>
         <div className="embla__container_why">
-          {WhyFxs.map((item, index) => (
+          {WHYFXS.map((item, index) => (
             <div className="embla__slide_why" key={index}>
               <div className="embla__slide__number_why">
                 <div className="h-full bg-gradient-to-b rounded-[20px] px-3 md:px-9 py-12 flex flex-col items-start gap-2 border-[1px] border-[#361056] from-[#2B0A47] to-[#09030E]">
                   {item.icon}
-                  <h1 className="!text-start !text-[30px] !mt-20">
+                  <h1 className="!text-start !text-[30px] mt-15">
                     {item.title}
                   </h1>
                   <p>{item.description}</p>
