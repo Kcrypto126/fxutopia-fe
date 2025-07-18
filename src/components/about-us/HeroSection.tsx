@@ -36,7 +36,7 @@ const HeroSection = () => {
         className="absolute bottom-0 left-[50%] -translate-x-[50%] -z-10 min-w-[1600px]"
       />
 
-      <div className="max-w-[1440px] mx-auto w-full min-h-fit py-19 lg:py-30 relative flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-8">
+      <div className="max-w-[1440px] mx-auto w-full min-h-screen py-19 lg:py-30 relative flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
           <h1 className="xl:!text-[70px] !leading-[100%] lg:!text-start bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#4E4EE41A] bg-clip-text text-transparent">
             Where Traders Learn, Grow & Thrive Together

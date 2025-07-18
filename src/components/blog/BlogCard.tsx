@@ -12,12 +12,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-interface BlogProps {
-  featured_image: string;
-  title: string;
-  description: string;
-  action: string;
-}
+import { BlogProps } from "@/app/blogs/data";
 
 const BlogCards = ({ data }: { data: BlogProps[] }) => {
   const [fromNumber, setFromNumber] = useState(0);
