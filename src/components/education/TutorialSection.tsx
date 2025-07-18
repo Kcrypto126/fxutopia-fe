@@ -9,7 +9,7 @@ const TutorialSection = () => {
       <div className="flex flex-col gap-8 md:gap-20">
         <div className="flex flex-col items-center">
           <Image
-            src="/assets/marketplace/tutorial-b.png"
+            src="/assets/education/tutorial-b.png"
             width={1402}
             height={254}
             alt="tutorial"
@@ -21,7 +21,7 @@ const TutorialSection = () => {
         </div>
         <div>
           <Image
-            src="/assets/marketplace/tutorial-v.png"
+            src="/assets/education/tutorial-v.png"
             width={1371}
             height={689}
             alt="video"
