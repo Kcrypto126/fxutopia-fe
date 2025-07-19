@@ -47,9 +47,7 @@ const ThreadSection = () => {
         toast("Copy failed", "Error");
         console.error(err);
       });
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
+    
   };
 
   return (
