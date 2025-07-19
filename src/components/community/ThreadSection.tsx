@@ -28,13 +28,7 @@ const ThreadSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  const showMore = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setThreadNumber(threadNumber + 3);
-      setIsLoading(false);
-    }, 1000);
-  };
+ 
 
   const copyText = (text: string) => {
     setIsCopied(true);
