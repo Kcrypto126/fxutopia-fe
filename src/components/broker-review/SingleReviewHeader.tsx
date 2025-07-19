@@ -21,12 +21,9 @@ const SingleReviewHeader = () => {
         <div className="flex gap-2 md:gap-4">
           <IconTrendingUp className="w-8 md:w-15 h-8 md:h-15 bg-[#8A50D6] p-1 md:p-3 rounded-[6px]" />
           <div className="flex flex-col">
-            <Link
-              href="/broker-review/single"
-              className="!text-[18px] md:!text-[36px] leading-[105%] hover:opacity-70 transition-all duration-300"
-            >
+            <h5 className="text-[18px] md:text-[36px] leading-[105%]">
               {REVIEWS[0].title}
-            </Link>
+            </h5>
             <p className="underline">{REVIEWS[0].website}</p>
           </div>
         </div>

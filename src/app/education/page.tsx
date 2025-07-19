@@ -11,6 +11,7 @@ const HeroData = {
 };
 
 import { Courses, Ebooks, Educations } from "@/app/education/data";
+
 const titles = [
   "See Our Latest Courses",
   "Essential e-Books for Every Trader",

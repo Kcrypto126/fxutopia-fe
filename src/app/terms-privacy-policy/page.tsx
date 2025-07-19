@@ -145,12 +145,12 @@ const Policy = [
 
 const TermsPrivacyPolicy = () => {
   return (
-    <Container className="py-25 lg:pt-48 lg:pb-32">
-      <div className="flex flex-col gap-5">
+    <Container className="py-25 lg:pt-48 lg:pb-28">
+      <div className="space-y-5">
         <h1 className="!text-start !leading-[115%] !text-[24px] md:!text-[46px]">
           Terms & Conditions & Privacy Policy
         </h1>
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="space-y-6 md:space-y-8">
           <h5 className="text-[18px] md:text-[30px] font-[700]">
             Terms & Conditions
           </h5>
@@ -174,7 +174,7 @@ const TermsPrivacyPolicy = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-6 md:gap-8 mt-5">
+        <div className="space-y-6 md:space-y-8 mt-5">
           <h5 className="text-[18px] md:text-[30px]">Privacy Policy</h5>
           {Policy.map((item, index) => (
             <div
