@@ -31,6 +31,7 @@ html {
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-si: 520px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-satoshi: "Satoshi";
