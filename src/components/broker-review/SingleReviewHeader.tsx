@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import RatingStars from "../marketplace/Rating";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

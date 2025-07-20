@@ -56,11 +56,11 @@ const mainMenu: { title: string; link: string }[] = [
   },
   {
     title: "Login",
-    link: "/signin",
+    link: "/auth/signin",
   },
   {
     title: "Sign Up",
-    link: "/signup",
+    link: "/auth/signup",
   },
 ];
 
@@ -73,7 +73,7 @@ const Header = () => {
     toast("Hi, john", "Success");
   };
 
-  if (pathname.includes("account")) {
+  if (pathname.includes("auth")) {
     return null;
   }
 
@@ -140,7 +140,7 @@ const Header = () => {
         </div>
 
         <div className="hidden xl:flex gap-3 justify-end items-center py-1">
-          <Link href="/account/signin">
+          <Link href="/auth/signin">
             <Button
               variant="login"
               className="login-button !bg-transparent hover:!bg-transparent"
@@ -151,7 +151,7 @@ const Header = () => {
               Login
             </Button>
           </Link>
-          <Link href="/account/signup">
+          <Link href="/auth/signup">
             <Button
               variant="login"
               className="text-[#000] bg-[#fff] hover:bg-[#fff]"

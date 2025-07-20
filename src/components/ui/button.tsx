@@ -31,6 +31,8 @@ const buttonVariants = cva(
         hover: "hover:shadow-[0_0_15px_#ffffff90]",
         select:
           "!text-[16px] !text-[#fff] font-[500] !h-11 md:!h-[52px] rounded-full bg-[#512F7C66] hover:bg-[#6B459C60]",
+        social:
+          "!w-full !h-11 flex gap-3 items-center rounded-[6px] text-[#fff] text-[16px] bg-[#1C122A] hover:!bg-[#2e1f42] shadow-[0_0_8px_0_#C89CFF]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
