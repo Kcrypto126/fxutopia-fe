@@ -56,12 +56,7 @@ const ThreadSection = () => {
     <div className="w-full flex flex-col gap-8 md:gap-11">
       <div className="flex gap-2 items-center justify-between">
         <div className="flex items-center gap-3 md:gap-5">
-          <Link href="/community/individual-category">
-            <Button variant="back" className="!pr-0.5">
-              <IconChevronLeft className="!w-[20px] !h-[20px]" />
-              <p className="hidden lg:block !text-[16px]">Back</p>
-            </Button>
-          </Link>
+          
         </div>
         <h5 className="text-[16px] md:text-[20px]">
           Total Discussions: {Threads.length}
