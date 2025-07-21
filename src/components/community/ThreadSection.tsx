@@ -81,10 +81,7 @@ const ThreadSection = () => {
             <div className="flex gap-2 justify-between">
               <div className="flex items-center gap-2 md:gap-4">
                 <Avatar className="w-8 md:w-14 h-8 md:h-14">
-                  <AvatarImage
-                    src={item.user.avatar}
-                    alt={item.user.username}
-                  />
+                  
                   <AvatarFallback>
                     {item.user.full_name.charAt(0).toUpperCase()}
                   </AvatarFallback>
