@@ -21,7 +21,13 @@ const FormSchema = z.object({
     .regex(/^\d{4}$/, { message: "Code must be 4 digits" }),
 });
 
-const EmailVerify = ({ email }: { email: string }) => {
+const EmailVerify = ({
+  email,
+  setEmailVerified,
+}: {
+  email: string;
+  setEmailVerified: (value: boolean) => void;
+}) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -55,6 +61,7 @@ const EmailVerify = ({ email }: { email: string }) => {
     setTimeout(() => {
       console.log("Submitted code:", data.opt);
       console.log("email:", email);
+      setEmailVerified(true);
       setIsSubmitting(false);
     }, 300);
   }

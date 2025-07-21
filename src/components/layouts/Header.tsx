@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { ToggleIcon } from "../ui/icon";
-import { useNotification } from "@/providers/notificationProvider";
 import { usePathname } from "next/navigation";
 
 const mainMenu: { title: string; link: string }[] = [
@@ -65,13 +64,8 @@ const mainMenu: { title: string; link: string }[] = [
 ];
 
 const Header = () => {
-  const { toast } = useNotification();
   const [isSheetOpen, setIsSheetOpen] = React.useState(false);
   const pathname = usePathname();
-
-  const handleLogin = () => {
-    toast("Hi, john", "Success");
-  };
 
   if (pathname.includes("auth")) {
     return null;
@@ -144,9 +138,6 @@ const Header = () => {
             <Button
               variant="login"
               className="login-button !bg-transparent hover:!bg-transparent"
-              onClick={() => {
-                handleLogin();
-              }}
             >
               Login
             </Button>

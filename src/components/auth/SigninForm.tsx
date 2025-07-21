@@ -48,8 +48,8 @@ const FormSchema = z.object({
 });
 
 const SigninForm = () => {
-  const [isVisible, setIsVisible] = useState(true);
-//   const router = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
+  //   const router = useRouter();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -103,7 +103,7 @@ const SigninForm = () => {
                 <FormControl>
                   <div className="relative">
                     <Input
-                      type={`${isVisible ? "password" : "text"}`}
+                      type={`${isVisible ? "text" : "password"}`}
                       placeholder="Enter your password"
                       className="!h-11 rounded-[6px] !bg-[#15101D] border-[#381E5B]"
                       {...field}
@@ -114,10 +114,10 @@ const SigninForm = () => {
                         setIsVisible(!isVisible);
                       }}
                     >
-                      {isVisible ? (
-                        <IconEye width="24" height="24" />
+                      {!isVisible ? (
+                        <IconEye width="22" height="22" />
                       ) : (
-                        <IconEyeOff width="24" height="24" />
+                        <IconEyeOff width="22" height="22" />
                       )}
                     </div>
                   </div>
@@ -162,7 +162,7 @@ const SigninForm = () => {
               )}
             />
             <Link
-              href="/auth/forgot-password"
+              href="/auth/retrieve"
               className="text-[#00A6E8] hover:text-[#7cd5f8] text-sm"
             >
               Forgot Password?
@@ -195,7 +195,7 @@ const SigninForm = () => {
             Don&apos;t have an account?
           </h5>
           <Link
-            href="/auth/signup"
+            href="/signup"
             className="text-[14px] font-[600] text-[#9862DB] hover:text-[#a86fed]"
           >
             Sign up
