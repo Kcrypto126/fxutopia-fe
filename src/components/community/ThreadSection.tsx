@@ -94,7 +94,7 @@ const ThreadSection = () => {
                 </h5>
               </div>
               <div className="flex items-center gap-2">
-                
+                <IconCalendarWeekFilled />
                 <h5 className="text-[14px] md:text-[20px]">{item.date}</h5>
               </div>
             </div>
