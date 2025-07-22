@@ -85,10 +85,7 @@ const ThreadSection = () => {
                     src={item.user.avatar}
                     alt={item.user.username}
                   />
-                  <AvatarFallback>
-                    {item.user.full_name.charAt(0).toUpperCase()}
-                  </AvatarFallback>
-                </Avatar>
+                  
                 <h5 className="text-[16px] md:text-[26px] font-[500]">
                   {item.user.username}
                 </h5>
