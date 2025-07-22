@@ -23,10 +23,10 @@ const FormSchema = z.object({
 
 const EmailVerify = ({
   email,
-  setEmailVerified,
+  setStep,
 }: {
   email: string;
-  setEmailVerified: (value: boolean) => void;
+  setStep: (value: number) => void;
 }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,10 +59,11 @@ const EmailVerify = ({
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     setIsSubmitting(true);
     setTimeout(() => {
+      setIsSubmitting(false);
       console.log("Submitted code:", data.opt);
       console.log("email:", email);
-      setEmailVerified(true);
-      setIsSubmitting(false);
+      
+      setStep(2);
     }, 300);
   }
 
@@ -73,7 +74,7 @@ const EmailVerify = ({
   return (
     <>
       <h5 className="text-[28px] font-[700] leading-[100%] text-center si:text-start">
-        Enter OTP
+        Verify Your Email
       </h5>
       <p className="!text-[14px] font-[400] text-[#9F9F9F] text-center si:text-start">
         Please enter your verification code

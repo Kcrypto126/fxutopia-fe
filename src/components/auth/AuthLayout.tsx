@@ -11,7 +11,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         width={980}
         height={615}
         alt="global"
-        className="absolute bottom-0 lg:bottom-[50%] translate-y-[50%] right-0 max-w-[980px] -z-10 w-full"
+        className="absolute bottom-0 lg:bottom-[50%] translate-y-[50%] right-0 max-w-[980px] -z-10 w-full h-auto"
       />
       <Image
         src="/assets/signin/utopia.png"
@@ -29,14 +29,14 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         className="absolute right-0 bottom-0 -z-10 w-auto h-auto"
       />
       <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-        <div className="pr-0 lg:pr-18 relative flex justify-center lg:justify-end">
+        <div className="pr-0 lg:pr-21 relative flex justify-center lg:justify-end">
           {children}
           <Image
             src="/assets/signin/rectangle.png"
             width={486}
             height={668}
             alt="rectangle"
-            className="absolute -right-8 bottom-0 -z-10 max-w-[486px] w-full h-auto hidden lg:block"
+            className="absolute -right-8 bottom-0 -z-10 h-full w-auto hidden lg:block"
           />
         </div>
         <div className="hidden lg:block"></div>

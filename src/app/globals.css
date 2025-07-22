@@ -360,3 +360,42 @@ svg.social-icon:hover circle {
     overflow-x: auto;
   }
 }
+
+/* phone number input */
+.PhoneInput .PhoneInputCountry {
+  border: 1px solid #381e5b;
+  border-radius: 6px;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.PhoneInputCountryIcon {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.PhoneInputCountryIconImg {
+  max-width: 200% !important;
+  width: auto !important;
+}
+
+.PhoneInputCountrySelectArrow {
+  margin-left: 10px !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.PhoneInput .PhoneInputInput {
+  border: 1px solid #381e5b;
+  border-radius: 6px;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.PhoneInputCountrySelect {
+  background-color: #130d1b !important;
+}

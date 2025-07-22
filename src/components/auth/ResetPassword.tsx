@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -48,8 +47,7 @@ const FormSchema = z
     message: "Passwords do not match",
   });
 
-const ResetPassword = () => {
-  const router = useRouter();
+const ResetPassword = ({ setStep }: { setStep: (val: number) => void }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -65,9 +63,10 @@ const ResetPassword = () => {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     setIsSubmitting(true);
     setTimeout(() => {
-      console.log("Submitted code:", data);
       setIsSubmitting(false);
-      router.push("/auth/signin");
+      console.log("Submitted code:", data);
+
+      setStep(3);
     }, 300);
   }
 

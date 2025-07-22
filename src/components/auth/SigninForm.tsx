@@ -6,7 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-// import { useRouter } from "next/navigation";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import {
@@ -47,9 +46,15 @@ const FormSchema = z.object({
   rememberme: z.boolean(),
 });
 
-const SigninForm = () => {
+const SigninForm = ({
+  setEmail,
+  setStep,
+}: {
+  setEmail: (val: string) => void;
+  setStep: (val: number) => void;
+}) => {
   const [isVisible, setIsVisible] = useState(false);
-  //   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -60,8 +65,15 @@ const SigninForm = () => {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      console.log(data);
+
+      setEmail(data.email);
+      setStep(1);
+    }, 300);
   }
 
   return (
@@ -131,9 +143,7 @@ const SigninForm = () => {
             variant="common"
             className="login-button rounded-[6px] !w-full !h-11"
           >
-            {form.formState.isSubmitting && (
-              <IconLoader2 className="animate-spin" />
-            )}
+            {isSubmitting && <IconLoader2 className="animate-spin" />}
             Sign In
           </Button>
           <div className="flex justify-between items-center">
@@ -146,7 +156,7 @@ const SigninForm = () => {
                     <div className="flex items-center gap-3">
                       <Checkbox
                         id="terms"
-                        className="data-[state=checked]:!bg-black data-[state=checked]:!text-white data-[state=checked]:!border-black"
+                        className="data-[state=checked]:!bg-transparent data-[state=checked]:!text-white data-[state=checked]:!border-[#545454]"
                         checked={field.value}
                         onCheckedChange={field.onChange}
                       />
@@ -195,7 +205,7 @@ const SigninForm = () => {
             Don&apos;t have an account?
           </h5>
           <Link
-            href="/signup"
+            href="/auth/signup"
             className="text-[14px] font-[600] text-[#9862DB] hover:text-[#a86fed]"
           >
             Sign up
