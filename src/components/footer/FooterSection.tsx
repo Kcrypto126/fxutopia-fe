@@ -123,13 +123,7 @@ const FooterSection = () => {
         </div>
         <div className="flex gap-2 items-center justify-between flex-wrap">
           <Link href="/">
-            <Image
-              src="/logo.png"
-              width={348}
-              height={82}
-              alt="logo"
-              className="w-full max-w-[145px] md:max-w-[348px]"
-            />
+            
           </Link>
           <div
             className="hidden lg:flex items-center gap-6 cursor-pointer"
