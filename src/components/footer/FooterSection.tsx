@@ -47,7 +47,13 @@ const FooterSection = () => {
 
   return (
     <Container className="relative z-0 py-8 md:py-12">
-      
+      <Image
+        src="/assets/footer/footer-bg.png"
+        width={1780}
+        height={169}
+        alt="footer"
+        className="absolute z-0 top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] cursor-pointer"
+      />
       <Image
         src="/assets/footer/footer-bottom.png"
         width={1600}
