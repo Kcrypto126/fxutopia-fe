@@ -21,7 +21,13 @@ const FormSchema = z.object({
     .regex(/^\d{4}$/, { message: "Code must be 4 digits" }),
 });
 
-const EmailVerify = ({ email }: { email: string }) => {
+const EmailVerify = ({
+  email,
+  setStep,
+}: {
+  email: string;
+  setStep: (value: number) => void;
+}) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -53,9 +59,11 @@ const EmailVerify = ({ email }: { email: string }) => {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     setIsSubmitting(true);
     setTimeout(() => {
+      setIsSubmitting(false);
       console.log("Submitted code:", data.opt);
       console.log("email:", email);
-      setIsSubmitting(false);
+      
+      setStep(2);
     }, 300);
   }
 
@@ -66,7 +74,7 @@ const EmailVerify = ({ email }: { email: string }) => {
   return (
     <>
       <h5 className="text-[28px] font-[700] leading-[100%] text-center si:text-start">
-        Enter OTP
+        Verify Your Email
       </h5>
       <p className="!text-[14px] font-[400] text-[#9F9F9F] text-center si:text-start">
         Please enter your verification code

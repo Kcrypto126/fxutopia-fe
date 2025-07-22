@@ -25,10 +25,10 @@ const FormSchema = z.object({
 });
 
 const EmailSent = ({
-  sent,
+  setStep,
   setEmail,
 }: {
-  sent: (value: boolean) => void;
+  setStep: (value: number) => void;
   setEmail: (value: string) => void;
 }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,9 +44,10 @@ const EmailSent = ({
     setEmail(data.email);
     setIsSubmitting(true);
     setTimeout(() => {
-      console.log(data);
-      sent(true);
       setIsSubmitting(false);
+      console.log(data);
+
+      setStep(1);
     }, 200);
   }
 
