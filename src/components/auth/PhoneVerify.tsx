@@ -20,12 +20,10 @@ const FormSchema = z.object({
     .regex(/^\d{4}$/, { message: "Code must be 4 digits" }),
 });
 
-const EmailVerify = ({
-  type,
+const PhoneVerify = ({
   email,
   setStep,
 }: {
-  type: string;
   email: string;
   setStep: (value: number) => void;
 }) => {
@@ -63,7 +61,7 @@ const EmailVerify = ({
       setIsSubmitting(false);
       console.log("Submitted code:", data.opt);
       console.log("email:", email);
-      setStep(2);
+      setStep(4);
     }, 300);
   }
 
@@ -71,19 +69,10 @@ const EmailVerify = ({
     console.log(email);
   };
 
-  const handleBack = () => {
-    // if (type == "Signin" || type == "Signup") {
-    //   setStep(0);
-    // } else {
-    //   setStep(1)
-    // }
-    setStep(0);
-  };
-
   return (
     <>
       <h5 className="text-[28px] font-[700] leading-[100%] text-center si:text-start">
-        Verify Your Email
+        Verify Your Phone
       </h5>
       <p className="!text-[14px] font-[400] text-[#9F9F9F] text-center si:text-start">
         Please enter your verification code
@@ -143,15 +132,11 @@ const EmailVerify = ({
             <h5
               className="text-[#9F9F9F] text-[14px] flex items-center gap-2 cursor-pointer"
               onClick={() => {
-                handleBack();
+                setStep(2);
               }}
             >
               <IconArrowLeft color="#7E18FF" />
-              {type == "Signup"
-                ? "Back to sign up"
-                : type == "Signin"
-                ? "Back to sign in"
-                : "Back to email sent"}
+              Back to add phone number
             </h5>
           </div>
         </form>
@@ -160,4 +145,4 @@ const EmailVerify = ({
   );
 };
 
-export default EmailVerify;
+export default PhoneVerify;

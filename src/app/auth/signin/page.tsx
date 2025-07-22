@@ -21,7 +21,7 @@ const SignIn = () => {
       {step == 0 ? (
         <SigninForm setEmail={setEmail} setStep={setStep} />
       ) : step == 1 ? (
-        <EmailVerify email={email} setStep={setStep} />
+        <EmailVerify type="Signin" email={email} setStep={setStep} />
       ) : (
         (() => {
           if (typeof window !== "undefined") {

@@ -28,7 +28,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         priority
         className="absolute right-0 bottom-0 -z-10 w-auto h-auto"
       />
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 si:px-3 py-3 si:py-0">
         <div className="pr-0 lg:pr-21 relative flex justify-center lg:justify-end">
           {children}
           <Image
