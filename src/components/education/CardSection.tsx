@@ -22,13 +22,13 @@ const CardSection = ({
   title: string;
   description: string;
 }) => {
-  const [Number, setNumber] = useState(6);
+  const [Number, setNumber] = useState(Math.min(6, data.length));
   const [isLoading, setIsLoading] = useState(false);
 
   const showMoreCourse = () => {
     setIsLoading(true);
     setTimeout(() => {
-      setNumber(Number + 6);
+      setNumber(Math.min(Number + 6, data.length));
       setIsLoading(false);
     }, 200);
   };
@@ -37,7 +37,7 @@ const CardSection = ({
     <Container className="pb-8 pt-15 md:pt-30">
       <div className="flex flex-col gap-8 md:gap-20">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-4 md:gap-6">
-          <h1 className="!text-center md:!text-start">{title}</h1>
+          <h1 className="md:!text-start">{title}</h1>
           <p className="text-[16px] lg:text-20px max-w-[580px] text-center md:text-start">
             {description}
           </p>
