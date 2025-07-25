@@ -28,7 +28,7 @@ const SingleReviewThread = () => {
 
   const showMore = () => {
     setIsLoading(true);
-    setTimeout(() => {
+    setTimeout(() => {     
       setThreadNumber(threadNumber + 3);
       setIsLoading(false);
     }, 1000);
