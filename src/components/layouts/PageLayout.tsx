@@ -3,6 +3,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const PageLayout = ({
   children,
@@ -11,6 +12,12 @@ const PageLayout = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  const pathname = usePathname();
+
+  if (pathname.includes("auth")) {
+    return <>{children}</>;
+  }
+
   return (
     <div className={cn("w-full relative z-0 overflow-hidden", className)}>
       <Image
@@ -18,7 +25,7 @@ const PageLayout = ({
         width={1840}
         height={800}
         alt="hero-top"
-        className="w-[300%] absolute top-0 left-[50%] -translate-x-[55%] -z-20 min-w-[1640px]"
+        className="w-[300%] min-w-[1640px] absolute top-0 left-[50%] -translate-x-[55%] -z-20"
       />
       <Image
         src="/assets/home/hero-left-top-light.png"

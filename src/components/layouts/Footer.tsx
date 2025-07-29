@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname();
 
-  if (pathname.includes("account")) {
+  if (pathname.includes("auth")) {
     return null;
   }
 

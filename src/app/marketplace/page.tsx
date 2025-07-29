@@ -1,50 +1,27 @@
 "use client";
 
-import HeroSection from "@/components/marketplace/HeroSection";
-import TutorialSection from "@/components/marketplace/TutorialSection";
-import CardSection from "@/components/marketplace/CardSection";
+import HeroSection from "@/components/education/HeroSection";
+import ReviewSection from "@/components/home/ReviewSection";
+import ExpertResourceSection from "@/components/marketplace/ExpertResourceSection";
+import RatingSection from "@/components/marketplace/RatingSection";
+import SellersSection from "@/components/marketplace/SellersSection";
 
 const HeroData = {
-  title: "Unlock your potential with expert-led education and resources",
+  title: "FX UTOPIA MARKETPLACE",
   description:
-    "Explore fresh perspectives, timely insights, and actionable trading content — created by traders, for traders.",
+    "Whether you're looking to optimize your Forex performance, automate your crypto strategies, or access advanced indicators — our marketplace delivers verified, vetted, and value-packed products from experienced creators.",
 };
 
-import { Courses, Ebooks, Marketplaces } from "@/app/marketplace/data";
-const titles = [
-  "See Our Latest Courses",
-  "Essential e-Books for Every Trader",
-  "FX Utopia Marketplace",
-];
-
-const descriptions = [
-  "Whether you're brand new to trading or seeking to fine-tune advanced strategies, our interactive courses cover the full spectrum. Built by professionals with years of real-market experience, each course includes practical examples, downloadable resources, quizzes, and community discussion.",
-  "Download actionable insights you can read anytime. <br /> Our growing e-book library turns complex topics into easy-to-follow guides. Perfect for offline reading or quick refreshers before you trade.",
-  "We've handpicked a collection of trading tools, indicators, and mentorships from verified providers. Whether you're automating your trades or searching for premium signals, the FX Utopia Marketplace makes it easy to find what works.",
-];
-
-const Marketplace = () => {
+const MarketPlace = () => {
   return (
-    <div className="pb-8 md:pb-22">
+    <div className="md:pb-20">
       <HeroSection data={HeroData} />
-      <CardSection
-        data={Courses}
-        title={titles[0]}
-        description={descriptions[0]}
-      />
-      <TutorialSection />
-      <CardSection
-        data={Ebooks}
-        title={titles[1]}
-        description={descriptions[1]}
-      />
-      <CardSection
-        data={Marketplaces}
-        title={titles[2]}
-        description={descriptions[2]}
-      />
+      <ExpertResourceSection />
+      <SellersSection />
+      <RatingSection />
+      <ReviewSection />
     </div>
   );
 };
 
-export default Marketplace;
+export default MarketPlace;

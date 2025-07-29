@@ -59,7 +59,7 @@ const ThreadSection = () => {
           <Link href="/community/individual-category">
             <Button variant="back" className="!pr-0.5">
               <IconChevronLeft className="!w-[20px] !h-[20px]" />
-              <p className="hidden lg:block !text-[16px]">Back</p>
+              <p className="hidden lg:block">Back</p>
             </Button>
           </Link>
         </div>

@@ -31,6 +31,7 @@ html {
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-si: 520px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-satoshi: "Satoshi";
@@ -212,7 +213,7 @@ img {
   background-color: #8a50d6;
 }
 .login-button:hover {
-  background-color: rgb(160, 104, 233) !important;
+  background-color: rgb(160, 104, 233);
 }
 
 .login-button::before {
@@ -348,4 +349,53 @@ svg.social-icon:hover circle {
   .truncate-multiline {
     -webkit-line-clamp: 2;
   }
+}
+
+.calendar {
+  overflow-x: visible;
+}
+
+@media only screen and (max-width: 1440px) {
+  .calendar {
+    overflow-x: auto;
+  }
+}
+
+/* phone number input */
+.PhoneInput .PhoneInputCountry {
+  border: 1px solid #381e5b;
+  border-radius: 6px;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.PhoneInputCountryIcon {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.PhoneInputCountryIconImg {
+  max-width: 200% !important;
+  width: auto !important;
+}
+
+.PhoneInputCountrySelectArrow {
+  margin-left: 10px !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.PhoneInput .PhoneInputInput {
+  border: 1px solid #381e5b;
+  border-radius: 6px;
+  height: 44px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.PhoneInputCountrySelect {
+  background-color: #130d1b !important;
 }

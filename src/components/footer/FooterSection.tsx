@@ -4,7 +4,6 @@ import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -29,7 +28,6 @@ const FormSchema = z.object({
 
 const FooterSection = () => {
   const [isSubmiting, setIsSubmiting] = useState(false);
-  const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -44,6 +42,10 @@ const FooterSection = () => {
       setIsSubmiting(false);
     }, 1000);
   }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <Container className="relative z-0 py-8 md:py-12">
@@ -61,7 +63,7 @@ const FooterSection = () => {
         alt="footer"
         className="absolute z-0 bottom-0 left-[50%] -translate-x-[50%] w-auto h-auto"
       />
-      <div className="relative z-10 flex flex-col gap-8 md:gap-20">
+      <div className="relative z-10 space-y-6">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-21 justify-between items-center">
           <div className="flex-1 w-full space-y-2">
             <h5 className="font-riosark text-[30px] md:text-[40px] xl:text-[56px] leading-[120%] uppercase text-center lg:text-start">
@@ -113,15 +115,19 @@ const FooterSection = () => {
           </div>
         </div>
         <div
-          className="flex lg:hidden items-center w-fit px-3 py-3 mx-auto border-[1px] border-[#604683] rounded-[8px] gap-3 cursor-pointer"
+          className="max-w-fit w-full mx-auto flex items-center gap-6 cursor-pointer"
           onClick={() => {
-            router.push("#");
+            scrollToTop();
           }}
         >
-          <IconChevronUp width="22" height="22" />
-          <h5 className="text-[14px]">Back to top</h5>
+          <IconChevronUp
+            width={60}
+            height={60}
+            className=" rounded-full p-3 bg-[#9441FE]"
+          />
+          <h5 className="text-[14px] md:text-[24px]">Back to top</h5>
         </div>
-        <div className="flex gap-2 items-center justify-between flex-wrap">
+        <div className="flex gap-4 items-center justify-between flex-wrap">
           <Link href="/">
             <Image
               src="/logo.png"
@@ -131,19 +137,22 @@ const FooterSection = () => {
               className="w-full max-w-[145px] md:max-w-[348px]"
             />
           </Link>
-          <div
-            className="hidden lg:flex items-center gap-6 cursor-pointer"
-            onClick={() => {
-              router.push("/#home");
-            }}
-          >
-            <div className="bg-[#9441FE] p-4 rounded-full">
-              <IconChevronUp width="25" height="25" />
-            </div>
-            <h5 className="text-[14px] md:text-[24px]">Back to top</h5>
+          <div className="flex flex-wrap gap-4 text-[14px] text-[#bbbbbb]">
+            <Link href="/about-us" className="underline">
+              About Us
+            </Link>
+            <Link href="/contact-us" className="underline">
+              Contact Us
+            </Link>
+            <Link href="/terms-privacy-policy" className="underline">
+              Terms and Privacy Policy
+            </Link>
           </div>
-          <div className="flex flex-col gap-4 ">
-            <h5 className="text-[26px] hidden lg:block">Follow us on</h5>
+
+          <div className="space-y-4">
+            <h5 className="text-[26px] hidden lg:block leading-[100%]">
+              Follow us on
+            </h5>
             <div className="flex gap-3 md:gap-5 items-center">
               <Link href="https://www.facebook.com" target="_blank">
                 <FaceBookIcon width="60" height="60" />

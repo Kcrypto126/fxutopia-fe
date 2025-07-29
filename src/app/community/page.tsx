@@ -9,7 +9,7 @@ import LatestDiscussionSection from "@/components/community/LatestDiscussionSect
 const Community = () => {
   return (
     <Container className="py-20 lg:pt-48 lg:pb-32">
-      <div className="flex flex-col gap-6 lg:gap-20 w-full">
+      <div className="space-y-6 lg:space-y-20 w-full">
         <FilterSection />
         <div className="flex flex-col xl:flex-row gap-10 justify-between">
           <div className="flex flex-col lg:flex-row gap-10">

@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { ToggleIcon } from "../ui/icon";
-import { useNotification } from "@/providers/notificationProvider";
 import { usePathname } from "next/navigation";
 
 const mainMenu: { title: string; link: string }[] = [
@@ -39,25 +38,36 @@ const mainMenu: { title: string; link: string }[] = [
     link: "/education",
   },
   {
+    title: "Economic",
+    link: "/economic",
+  },
+  {
     title: "Community",
     link: "/community",
+  },
+  {
+    title: "Reviews",
+    link: "/broker-reviews",
   },
   {
     title: "Blog",
     link: "/blogs",
   },
+  {
+    title: "Login",
+    link: "/auth/signin",
+  },
+  {
+    title: "Sign Up",
+    link: "/auth/signup",
+  },
 ];
 
 const Header = () => {
-  const { toast } = useNotification();
   const [isSheetOpen, setIsSheetOpen] = React.useState(false);
   const pathname = usePathname();
 
-  const handleLogin = () => {
-    toast("Hi, john", "Success");
-  };
-
-  if (pathname.includes("account")) {
+  if (pathname.includes("auth")) {
     return null;
   }
 
@@ -73,9 +83,9 @@ const Header = () => {
             className="max-w-[170px] lg:max-w-[200px] w-full"
           />
         </Link>
-        <NavigationMenu viewport={false} className="hidden lg:block">
+        <NavigationMenu viewport={false} className="hidden xl:block">
           <NavigationMenuList>
-            {mainMenu.map((item) => (
+            {mainMenu.slice(0, mainMenu.length - 2).map((item) => (
               <NavigationMenuItem key={item.title}>
                 <NavigationMenuLink href={item.link}>
                   {item.title}
@@ -85,7 +95,7 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="block lg:hidden">
+        <div className="block xl:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button
@@ -123,19 +133,16 @@ const Header = () => {
           </Sheet>
         </div>
 
-        <div className="hidden lg:flex gap-3 justify-end items-center py-1">
-          <Link href="/account/signin">
+        <div className="hidden xl:flex gap-3 justify-end items-center py-1">
+          <Link href="/auth/signin">
             <Button
               variant="login"
               className="login-button !bg-transparent hover:!bg-transparent"
-              onClick={() => {
-                handleLogin();
-              }}
             >
               Login
             </Button>
           </Link>
-          <Link href="/account/signup">
+          <Link href="/auth/signup">
             <Button
               variant="login"
               className="text-[#000] bg-[#fff] hover:bg-[#fff]"

@@ -12,12 +12,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-interface BlogProps {
-  featured_image: string;
-  title: string;
-  description: string;
-  action: string;
-}
+import { BlogProps } from "@/app/blogs/data";
 
 const BlogCards = ({ data }: { data: BlogProps[] }) => {
   const [fromNumber, setFromNumber] = useState(0);
@@ -44,7 +39,11 @@ const BlogCards = ({ data }: { data: BlogProps[] }) => {
               {item.title}
             </h5>
             <p className="text-[16px] md:text-[20px]">{item.description}</p>
-            
+            <Link href="/blogs/blog">
+              <Button variant="common" className="login-button w-fit px-6 !h-9">
+                {item.action}
+              </Button>
+            </Link>
           </div>
         ))}
       </div>
